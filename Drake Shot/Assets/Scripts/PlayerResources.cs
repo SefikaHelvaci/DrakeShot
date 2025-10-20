@@ -16,14 +16,14 @@ public class PlayerResources : MonoBehaviour {
         
     }
     
-    public void Add(int type) {
+    public void Add(string type) {
 
         switch (type) {
             
-            case 0:
+            case "Gold":
                 playerGold++;
                 break;
-            case 1:
+            case "XP":
                 playerXP++;
                 break;
             

@@ -18,12 +18,7 @@ public class Collectible : MonoBehaviour {
             
             PlayerResources resources = other.GetComponent<PlayerResources>();
             
-            if (CompareTag("Gold")) {
-                resources.Add(0);
-            }
-            else if (CompareTag("XP")) {
-                resources.Add(1);
-            }
+            resources.Add(tag);
             
             Destroy(gameObject);
             
