@@ -22,7 +22,7 @@ public class PlayerScript : MonoBehaviour {
 
     }
     
-    public bool TryToBuyItem(int price, string itemType, int effectValue) {
+    public bool TryAndBuyItem(int price, string itemType, int effectValue) {
         
         if (playerGold >= price) {
             playerGold -= price;
@@ -33,15 +33,17 @@ public class PlayerScript : MonoBehaviour {
         return false;
         
         void ApplyEffect() {
-                    
-            if (itemType == "Health") {
-                playerHealth += effectValue;
-            }
-            else if (itemType == "Damage") {
-                playerDamage = effectValue;
-            }
-            else if (itemType == "Armor") {
-                playerArmor  += effectValue;
+
+            switch (itemType) {
+                case "Health":
+                    playerHealth += effectValue;
+                    break;
+                case "Damage":
+                    playerDamage = effectValue;
+                    break;
+                case "Armor":
+                    playerArmor  += effectValue;
+                    break;
             }
                     
         }
