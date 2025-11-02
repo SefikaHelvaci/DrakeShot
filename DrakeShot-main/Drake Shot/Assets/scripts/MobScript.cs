@@ -3,11 +3,11 @@ using UnityEngine;
 public class MobScript : MonoBehaviour {
     
     public int health = 10;
+    public float cycleCoef = 1f;
     public GameObject goldPrefab;
     public GameObject XPPrefab;
-    public float cycleCoef = 1f;
     
-    public void TakeDamage(int damageAmount) {
+    private void TakeDamage(int damageAmount) {
         
         health -= damageAmount;
 

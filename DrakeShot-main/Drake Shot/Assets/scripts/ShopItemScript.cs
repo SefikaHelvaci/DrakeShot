@@ -3,8 +3,14 @@ using UnityEngine;
 public class ShopItemScript : MonoBehaviour {
     
     public int price;
-    public string itemType;
     public int effectValue;
+    public GameObject textE; 
+
+    private void Start() {
+        
+        textE.SetActive(false);
+        
+    }
     
     private void OnTriggerStay2D(Collider2D other) {
         
@@ -16,10 +22,26 @@ public class ShopItemScript : MonoBehaviour {
 
             PlayerScript myPlayerScript = other.GetComponent<PlayerScript>();
             
-            if (myPlayerScript.TryAndBuyItem(price, itemType, effectValue)) {
+            if (myPlayerScript.TryAndBuyItem(price, tag, effectValue)) {
                 Destroy(gameObject);
             }
             
+        }
+        
+    }
+    
+    private void OnTriggerEnter2D(Collider2D other) {
+        
+        if (other.CompareTag("Player")) {
+            textE.SetActive(true);
+        }
+        
+    }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        
+        if (other.CompareTag("Player")) {
+            textE.SetActive(false);
         }
         
     }

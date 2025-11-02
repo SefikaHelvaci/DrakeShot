@@ -8,7 +8,7 @@ public class PlayerScript : MonoBehaviour {
     public int playerArmor;
     public int playerGold;
     public int playerXP;
-    
+
     public void Add(string type) {
 
         switch (type) {
@@ -21,7 +21,7 @@ public class PlayerScript : MonoBehaviour {
         }
 
     }
-    
+
     public bool TryAndBuyItem(int price, string itemType, int effectValue) {
         
         if (playerGold >= price) {
@@ -38,7 +38,7 @@ public class PlayerScript : MonoBehaviour {
                 case "Health":
                     playerHealth += effectValue;
                     break;
-                case "Damage":
+                case "Weapon":
                     playerDamage = effectValue;
                     break;
                 case "Armor":
