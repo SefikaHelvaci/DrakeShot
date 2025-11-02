@@ -6,7 +6,7 @@ namespace Cainos.PixelArtTopDown_Basic
 {
     public class TopDownCharacterController : MonoBehaviour
     {
-        public float speed;
+        public PlayerScript myPlayer;
 
         private void Update()
         {
@@ -31,7 +31,7 @@ namespace Cainos.PixelArtTopDown_Basic
 
             dir.Normalize();
 
-            GetComponent<Rigidbody2D>().linearVelocity = speed * dir;
+            GetComponent<Rigidbody2D>().linearVelocity = myPlayer.playerSpeed * dir;
         }
     }
 }

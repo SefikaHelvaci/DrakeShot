@@ -5,7 +5,7 @@ public class MobScript : MonoBehaviour {
     public int health = 10;
     public float cycleCoef = 1f;
     public GameObject goldPrefab;
-    public GameObject XPPrefab;
+    public GameObject xpPrefab;
     
     private void TakeDamage(int damageAmount) {
         
@@ -22,7 +22,7 @@ public class MobScript : MonoBehaviour {
             }
         
             AutoInstantiate(goldPrefab);
-            AutoInstantiate(XPPrefab);
+            AutoInstantiate(xpPrefab);
                 
             Destroy(gameObject);
                 

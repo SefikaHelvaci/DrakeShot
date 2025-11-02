@@ -7,8 +7,18 @@ public class PlayerScript : MonoBehaviour {
     public int playerDamage;
     public int playerArmor;
     public int playerGold;
-    public int playerXP;
+    public int playerXp;
+    public float playerSpeed = 3.0f;
+    private bool _speedSkillUnlocked;
 
+    void Update() {
+
+        if (!_speedSkillUnlocked && Input.GetKeyDown(KeyCode.F1)) {
+            TryAndUnlockSkill(1, "Speed", 1.5f);
+        }
+        
+    }
+    
     public void Add(string type) {
 
         switch (type) {
@@ -16,7 +26,7 @@ public class PlayerScript : MonoBehaviour {
                 playerGold++;
                 break;
             case "XP":
-                playerXP++;
+                playerXp++;
                 break;
         }
 
@@ -43,6 +53,29 @@ public class PlayerScript : MonoBehaviour {
                     break;
                 case "Armor":
                     playerArmor  += effectValue;
+                    break;
+            }
+                    
+        }
+        
+    }
+
+    public bool TryAndUnlockSkill(int cost, string skillType, float effectValue) {
+
+        if (playerXp >= cost) {
+            playerXp -= cost;
+            ApplyEffect();
+            return true;
+        }
+        
+        return false;
+        
+        void ApplyEffect() {
+
+            switch (skillType) {
+                case "Speed":
+                    playerSpeed += effectValue;
+                    _speedSkillUnlocked = true;
                     break;
             }
                     
