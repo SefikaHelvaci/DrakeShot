@@ -8,6 +8,8 @@ TagManager:
   - XP
   - Gold
   - Weapon
+  - Health
+  - Armor
   layers:
   - Default
   - TransparentFX
