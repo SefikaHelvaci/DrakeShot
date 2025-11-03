@@ -27,9 +27,10 @@ public class getHit : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D monster)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (monster.CompareTag("Enemy"))
+        Debug.Log($"{gameObject.name} (tag: {gameObject.tag}) collided with {collision.gameObject.name} (tag: {collision.gameObject.tag})");
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             hurt(monsterDMG);
         }
