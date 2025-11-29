@@ -40,7 +40,12 @@ public class getHit : MonoBehaviour
     {
         HP -= dmg;
         Debug.Log($"You crashed into a monster! -1 HP. Curr HP: {HP}");
+
         if (HP <= 0)
+        {
+            HP = 0;
+        }
+        if (HP == 0)
         {
             Debug.Log($"YOU DIED");
             Destroy(gameObject);
