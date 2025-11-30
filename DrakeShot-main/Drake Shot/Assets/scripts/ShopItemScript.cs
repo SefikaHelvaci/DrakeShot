@@ -1,14 +1,17 @@
 using UnityEngine;
+using TMPro;
 
 public class ShopItemScript : MonoBehaviour {
     
     public int price;
     public int effectValue;
-    public GameObject textE; 
+    public GameObject textE;
+    public TextMeshPro addText;
 
     private void Start() {
         
-        textE.SetActive(false);
+        addText.text = addText.text + "Cost: " + price + "\nValue: " + effectValue;
+        addText.gameObject.SetActive(false);
         
     }
     
@@ -33,7 +36,7 @@ public class ShopItemScript : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
         
         if (other.CompareTag("Player")) {
-            textE.SetActive(true);
+            addText.gameObject.SetActive(true);
         }
         
     }
@@ -41,7 +44,7 @@ public class ShopItemScript : MonoBehaviour {
     private void OnTriggerExit2D(Collider2D other) {
         
         if (other.CompareTag("Player")) {
-            textE.SetActive(false);
+            addText.gameObject.SetActive(false);
         }
         
     }

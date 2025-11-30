@@ -18,7 +18,7 @@ public class SkillButtonScript : MonoBehaviour {
     
     public void UnlockSkill() {
         
-        if (myPlayer.TryAndUnlockSkill(skillCost, skillType, effectValue)) {
+        if (myPlayer.TryAndApplySkillEffect(skillCost, skillType, effectValue)) {
             GetComponent<Button>().interactable = false;
         }
         

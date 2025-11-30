@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
@@ -58,7 +57,7 @@ public class PlayerScript : MonoBehaviour {
         
     }
 
-    public bool TryAndUnlockSkill(int cost, string skillType, float effectValue) {
+    public bool TryAndApplySkillEffect(int cost, string skillType, float effectValue) {
 
         if (playerXp >= cost) {
             playerXp -= cost;
