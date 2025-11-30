@@ -1,3 +1,5 @@
+using System;
+using TMPro;
 using UnityEngine;
 
 public class MenuScript : MonoBehaviour {
@@ -6,7 +8,10 @@ public class MenuScript : MonoBehaviour {
     public GameObject skillsMenu;
     public GameObject settingsMenu;
     private GameObject _openedMenu;
-    
+    public TextMeshProUGUI skillsRebindButtonText;
+    private KeyCode _skillMenuKey = KeyCode.K;
+    private bool _rebinding;
+
     private void Awake() {
         
         DontDestroyOnLoad(gameObject);
@@ -16,14 +21,39 @@ public class MenuScript : MonoBehaviour {
         settingsMenu.SetActive(false);
         
     }
+    
+    private void Start() {
+        
+        skillsRebindButtonText.text = "Skills Menu Key: " + _skillMenuKey;
+        
+    }
 
     private void Update() {
 
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            DoMenuOp(escMenu);
+        if (!_rebinding) {
+            if (Input.GetKeyDown(KeyCode.Escape)) {
+                DoMenuOp(escMenu);
+            }
+            else if (Input.GetKeyDown(_skillMenuKey)) {
+                DoMenuOp(skillsMenu);
+            }
         }
-        else if (Input.GetKeyUp(KeyCode.K)) {
-            DoMenuOp(skillsMenu);
+        else {
+            if (Input.anyKeyDown) {
+                foreach (KeyCode k in Enum.GetValues(typeof(KeyCode))) {
+                    if (k == KeyCode.Mouse0 || k == KeyCode.Escape) {
+                        continue;
+                    }
+                    
+                    if (Input.GetKeyDown(k)) {
+                        _rebinding = false;
+
+                        _skillMenuKey = k;
+                        
+                        skillsRebindButtonText.text = "Skills Menu Key: " + k;
+                    }
+                }
+            }
         }
         
     }
@@ -42,7 +72,7 @@ public class MenuScript : MonoBehaviour {
             
     }
     
-    public void CloseMenu(GameObject menu) {
+    private void CloseMenu(GameObject menu) {
         
         menu.SetActive(false);
         _openedMenu = null;
@@ -85,10 +115,20 @@ public class MenuScript : MonoBehaviour {
     
     //This func. is not private because back button uses it.
     public void CloseSettingsMenuForBackButton() {
+
+        if (!_rebinding) {
+            settingsMenu.SetActive(false);
+            escMenu.SetActive(true);
+            _openedMenu = escMenu;
+        }
         
-        settingsMenu.SetActive(false);
-        escMenu.SetActive(true);
-        _openedMenu = escMenu;
+    }
+    
+    //This func. is not private because skills menu rebind button uses it.
+    public void StartRebinding() {
+        
+        _rebinding = true;
+        skillsRebindButtonText.text = "Waiting";
         
     }
     
