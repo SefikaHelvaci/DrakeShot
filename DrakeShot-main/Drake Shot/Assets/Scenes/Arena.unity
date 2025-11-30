@@ -508,7 +508,6 @@ GameObject:
   - component: {fileID: 266376401}
   - component: {fileID: 266376400}
   - component: {fileID: 266376402}
-  - component: {fileID: 266376403}
   - component: {fileID: 266376404}
   m_Layer: 0
   m_Name: playerPlaceHolder
@@ -673,7 +672,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &266376402
 MonoBehaviour:
@@ -690,18 +689,6 @@ MonoBehaviour:
   maxHP: 10
   HP: 10
   monsterDMG: 1
---- !u!114 &266376403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 266376396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9db827a1358d854c807d517f1edf107, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &266376404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -994,7 +981,7 @@ Transform:
   m_GameObject: {fileID: 659096935}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.2165, y: 5.4389997, z: 0}
+  m_LocalPosition: {x: 9.15, y: 5.4389997, z: 0}
   m_LocalScale: {x: -0.513285, y: 10.106952, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1431,7 +1418,7 @@ Transform:
   m_GameObject: {fileID: 1134403498}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 10.777599, z: 0}
+  m_LocalPosition: {x: 0, y: 10.72, z: 0}
   m_LocalScale: {x: -0.64838153, y: 18.213737, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1718,7 +1705,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &1261910034
 CircleCollider2D:
@@ -1754,8 +1741,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.21133333}
-  m_Radius: 0.5
+  m_Offset: {x: 0, y: 0.21550286}
+  m_Radius: 0.49583042
 --- !u!114 &1261910035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1785,9 +1772,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a17c515b6883e04eaebde998142378b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingObject: {fileID: 1261910032}
-  targetPosition: {fileID: 266376396}
-  speed: 1
+  rb: {fileID: 1261910033}
+  target: {fileID: 266376399}
+  speed: 3
 --- !u!212 &1261910037
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1853,7 +1840,7 @@ Transform:
   m_GameObject: {fileID: 1261910032}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2, y: 3, z: 0}
+  m_LocalPosition: {x: -0.142, y: 3.008, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4150,7 +4137,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &1403123974
 MonoBehaviour:
@@ -4164,9 +4151,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a17c515b6883e04eaebde998142378b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingObject: {fileID: 1403123968}
-  targetPosition: {fileID: 266376396}
-  speed: 3
+  rb: {fileID: 1403123973}
+  target: {fileID: 266376399}
+  speed: 5
 --- !u!1 &1510125463
 GameObject:
   m_ObjectHideFlags: 0
@@ -4587,7 +4574,7 @@ Transform:
   m_GameObject: {fileID: 1805220277}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.3235, y: 5.4389997, z: 0}
+  m_LocalPosition: {x: -9.22, y: 5.4389997, z: 0}
   m_LocalScale: {x: -0.513285, y: 10.106952, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4889,8 +4876,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a17c515b6883e04eaebde998142378b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingObject: {fileID: 0}
-  targetPosition: {fileID: 0}
+  rb: {fileID: 0}
+  target: {fileID: 0}
   speed: 1
 --- !u!114 &1873544021
 MonoBehaviour:
