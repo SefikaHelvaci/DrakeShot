@@ -10,17 +10,10 @@ public class PlayerScript : MonoBehaviour {
     public int playerGold;
     public int playerXp;
     public float playerSpeed = 3.0f;
-    private bool _speedSkillUnlocked;
 
     private void Awake() {
+        
         DontDestroyOnLoad(gameObject);
-    }
-
-    void Update() {
-
-        if (!_speedSkillUnlocked && Input.GetKeyDown(KeyCode.F1)) {
-            TryAndUnlockSkill(1, "Speed", 1.5f);
-        }
         
     }
     
@@ -80,7 +73,6 @@ public class PlayerScript : MonoBehaviour {
             switch (skillType) {
                 case "Speed":
                     playerSpeed += effectValue;
-                    _speedSkillUnlocked = true;
                     break;
             }
                     
