@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
@@ -10,6 +11,10 @@ public class PlayerScript : MonoBehaviour {
     public int playerXp;
     public float playerSpeed = 3.0f;
     private bool _speedSkillUnlocked;
+
+    private void Awake() {
+        DontDestroyOnLoad(gameObject);
+    }
 
     void Update() {
 
