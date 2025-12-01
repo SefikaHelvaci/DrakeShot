@@ -14,7 +14,6 @@ public class playerControl : MonoBehaviour
 
     void Start()
     {
-        speed = myPlayer.playerSpeed;
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
@@ -57,6 +56,7 @@ public class playerControl : MonoBehaviour
 
     void FixedUpdate()
     {
+        speed = myPlayer.playerSpeed;
         rb.linearVelocity = movement * speed;
     }
 

@@ -1388,7 +1388,7 @@ MonoBehaviour:
   myPlayer: {fileID: 266376400}
   addText: {fileID: 1351344561}
   skillCost: 0
-  skillType: '"Speed"'
+  skillType: Speed
   effectValue: 5
 --- !u!1 &923970441
 GameObject:
