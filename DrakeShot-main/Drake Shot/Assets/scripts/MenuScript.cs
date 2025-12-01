@@ -10,6 +10,7 @@ public class MenuScript : MonoBehaviour {
     private GameObject _openedMenu;
     public TextMeshProUGUI skillsRebindButtonText;
     private KeyCode _skillMenuKey = KeyCode.K;
+    public static KeyCode _interactionKey = KeyCode.E;
     private bool _rebinding;
 
     private void Awake() {
