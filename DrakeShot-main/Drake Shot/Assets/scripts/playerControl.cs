@@ -3,16 +3,18 @@ using UnityEngine;
 public class playerControl : MonoBehaviour
 {
     
-    public float speed = 5f; 
+    public PlayerScript myPlayer;
     public bool canMoveDiagonally = true;
 
     // Private variables 
+    private float speed; 
     private Rigidbody2D rb; 
     private Vector2 movement; 
     private bool isMovingHorizontally = true; 
 
     void Start()
     {
+        speed = myPlayer.playerSpeed;
         rb = GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
