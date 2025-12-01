@@ -131,7 +131,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1253340270}
     m_Modifications:
     - target: {fileID: 2696359661667827599, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
         type: 3}
@@ -146,12 +146,12 @@ PrefabInstance:
     - target: {fileID: 2696359661667827599, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 57.6117
+      value: -10.7983055
       objectReference: {fileID: 0}
     - target: {fileID: 2696359661667827599, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.4677
+      value: 4.087699
       objectReference: {fileID: 0}
     - target: {fileID: 2696359661667827599, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
         type: 3}
@@ -1876,6 +1876,7 @@ Transform:
   - {fileID: 206999657}
   - {fileID: 1491712330}
   - {fileID: 202480503}
+  - {fileID: 1477973213}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1283963546
@@ -2448,6 +2449,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d24a4ea6b7d67724b889dfbd2a1c3bc8, type: 3}
+--- !u!4 &1477973213 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2696359661667827599, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
+    type: 3}
+  m_PrefabInstance: {fileID: 103950502}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1491712330 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2696359661667827599, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
@@ -12340,6 +12347,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5850696109722643674, guid: 13b8077a247bce44fa238265c45daa56,
+        type: 3}
+      propertyPath: hitSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8997223643719226022, guid: 13b8077a247bce44fa238265c45daa56,
         type: 3}
       propertyPath: m_Name
@@ -12361,5 +12373,4 @@ SceneRoots:
   - {fileID: 1253340270}
   - {fileID: 1748862227}
   - {fileID: 886592902}
-  - {fileID: 103950502}
   - {fileID: 1153846951}
