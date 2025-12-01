@@ -5,7 +5,6 @@ public class ShopItemScript : MonoBehaviour {
     
     public int price;
     public int effectValue;
-    public GameObject textE;
     public TextMeshPro addText;
 
     private void Start() {

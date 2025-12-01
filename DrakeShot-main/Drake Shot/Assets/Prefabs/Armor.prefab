@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8250872853702791147}
   - component: {fileID: 5927257178957078979}
   m_Layer: 0
-  m_Name: TextE
+  m_Name: InfoText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -316,5 +316,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 1
   effectValue: 1
-  textE: {fileID: 5507062831255621677}
   addText: {fileID: 5927257178957078979}

@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbdccf0503c322d4b8c1647dbbbd9e5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  myPlayer: {fileID: 5343860226427839191}
   canMoveDiagonally: 1
 --- !u!114 &2034875694665577471
 MonoBehaviour:
@@ -212,4 +212,4 @@ MonoBehaviour:
   playerArmor: 0
   playerGold: 0
   playerXp: 0
-  playerSpeed: 3
+  playerSpeed: 5
