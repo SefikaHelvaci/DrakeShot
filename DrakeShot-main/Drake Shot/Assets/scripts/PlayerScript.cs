@@ -8,7 +8,7 @@ public class PlayerScript : MonoBehaviour {
     public int playerArmor;
     public int playerGold;
     public int playerXp;
-    public float playerSpeed = 3.0f;
+    public float playerSpeed = 5.0f;
 
     private void Awake() {
         

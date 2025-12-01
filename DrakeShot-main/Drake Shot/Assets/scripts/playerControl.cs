@@ -3,10 +3,11 @@ using UnityEngine;
 public class playerControl : MonoBehaviour
 {
     
-    public float speed = 5f; 
+    public PlayerScript myPlayer;
     public bool canMoveDiagonally = true;
 
     // Private variables 
+    private float speed; 
     private Rigidbody2D rb; 
     private Vector2 movement; 
     private bool isMovingHorizontally = true; 
@@ -55,6 +56,7 @@ public class playerControl : MonoBehaviour
 
     void FixedUpdate()
     {
+        speed = myPlayer.playerSpeed;
         rb.linearVelocity = movement * speed;
     }
 
