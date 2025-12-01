@@ -10,6 +10,8 @@ TagManager:
   - Weapon
   - Health
   - Armor
+  - Walls
+  - Hazard
   layers:
   - Default
   - TransparentFX
