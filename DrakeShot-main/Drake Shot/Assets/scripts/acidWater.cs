@@ -5,7 +5,6 @@ public class acidWater : MonoBehaviour
 {
 
     public int damage = 1;
-    private bool dmgable = true;
 
     public float hitSpeed = 1f;
     //^^ privatize this one after tests
@@ -24,7 +23,7 @@ public class acidWater : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D col)
     {
-        if (col.CompareTag("Player") && dmgable)
+        if (col.CompareTag("Player"))
         {
 
             getHit hitScript = col.GetComponent<getHit>();
@@ -38,7 +37,6 @@ public class acidWater : MonoBehaviour
 
     IEnumerator waterDamage(getHit hitScript)
     {
-        dmgable = false;
         hitScript.HP -= damage;
         Debug.Log("Player got soaked by water. HP now: " + hitScript.HP);
         
@@ -48,7 +46,6 @@ public class acidWater : MonoBehaviour
             yield break;
         }
         yield return new WaitForSeconds(hitSpeed);
-        dmgable = true;
     }
 
 
