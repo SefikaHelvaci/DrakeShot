@@ -7,7 +7,7 @@ public class MobScript : MonoBehaviour {
     public GameObject goldPrefab;
     public GameObject xpPrefab;
     
-    private void TakeDamage(int damageAmount) {
+    public void TakeDamage(int damageAmount) {
         
         health -= damageAmount;
 

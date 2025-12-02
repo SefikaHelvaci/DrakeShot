@@ -124,7 +124,8 @@ MonoBehaviour:
   cycleCoef: 1
   goldPrefab: {fileID: 3303621969685416096, guid: beaf10b9047c9ab459200f0498262da2,
     type: 3}
-  xpPrefab: {fileID: 0}
+  xpPrefab: {fileID: 5752143571989013688, guid: 4570309abf6eb9b4a80d9dd450f8bd4b,
+    type: 3}
 --- !u!58 &6975854582978200600
 CircleCollider2D:
   m_ObjectHideFlags: 0
