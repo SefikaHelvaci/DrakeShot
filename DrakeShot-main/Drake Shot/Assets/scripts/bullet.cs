@@ -8,6 +8,7 @@ public class bullet : MonoBehaviour
     private Rigidbody2D rb;
     private Transform player;
     private Vector2 moveDirection;
+    public float destructionTime = 5f;
 
     void Start()
     {
@@ -26,9 +27,8 @@ public class bullet : MonoBehaviour
         {
             rb.linearVelocity = transform.right * moveSpeed;
         }
-
-        // destroy after 3 seconds
-        Destroy(gameObject, 3f);
+        
+        Destroy(gameObject, destructionTime);
     }
 
     void OnTriggerEnter2D(Collider2D col)
