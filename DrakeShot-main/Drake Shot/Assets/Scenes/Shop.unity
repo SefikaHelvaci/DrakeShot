@@ -663,7 +663,7 @@ MonoBehaviour:
   playerHealth: 10
   playerDamage: 0
   playerArmor: 0
-  playerGold: 0
+  playerGold: 10
   playerXp: 0
   playerSpeed: 3
 --- !u!1 &519420028
@@ -4099,6 +4099,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1417730714791226685, guid: c84a12220f78da44bae26535f736e8e4,
+        type: 3}
+      propertyPath: playerGold
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4165040887956109223, guid: c84a12220f78da44bae26535f736e8e4,
         type: 3}
       propertyPath: m_LocalPosition.x

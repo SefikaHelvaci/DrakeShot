@@ -11937,11 +11937,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2034875694665577471, guid: 43a7b7183967fa444bf0aa2f659bce94,
-        type: 3}
-      propertyPath: maxHP
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 4003420034557554210, guid: 43a7b7183967fa444bf0aa2f659bce94,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11996,11 +11991,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: playerPlaceHolder (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5343860226427839191, guid: 43a7b7183967fa444bf0aa2f659bce94,
-        type: 3}
-      propertyPath: playerHealth
-      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
