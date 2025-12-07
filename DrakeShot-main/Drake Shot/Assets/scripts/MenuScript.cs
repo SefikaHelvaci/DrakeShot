@@ -7,10 +7,14 @@ public class MenuScript : MonoBehaviour {
     public GameObject escMenu;
     public GameObject skillsMenu;
     public GameObject settingsMenu;
+    public GameObject characterMenu;
     private GameObject _openedMenu;
     public TextMeshProUGUI skillsMenuKeyRebindButtonText;
     public TextMeshProUGUI interactionKeyRebindButtonText;
+    public TextMeshProUGUI characterMenuLeftText;
+    public TextMeshProUGUI characterMenuRightText;
     private KeyCode _skillMenuKey = KeyCode.K;
+    private KeyCode _characterMenuKey = KeyCode.C;
     public static KeyCode InteractionKey = KeyCode.E;
     private string _rebindTarget = "none";
 
@@ -21,6 +25,7 @@ public class MenuScript : MonoBehaviour {
         escMenu.SetActive(false);
         skillsMenu.SetActive(false);
         settingsMenu.SetActive(false);
+        characterMenu.SetActive(false);
         
     }
     
@@ -39,6 +44,10 @@ public class MenuScript : MonoBehaviour {
             }
             else if (Input.GetKeyDown(_skillMenuKey)) {
                 DoMenuOp(skillsMenu);
+            }
+            else if (Input.GetKeyDown(_characterMenuKey)) {
+                UpdateCharacterMenuTexts();
+                DoMenuOp(characterMenu);
             }
         }
         else {
@@ -113,6 +122,19 @@ public class MenuScript : MonoBehaviour {
         _openedMenu.SetActive(false);
         menu.SetActive(true);
         _openedMenu = menu;
+
+    }
+    
+    private void UpdateCharacterMenuTexts() {
+        
+        PlayerScript myPlayerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
+        
+        characterMenuLeftText.text = "Health: " + myPlayerScript.playerHealth + " / " + "100" + "\n";
+        characterMenuLeftText.text += "Armor: " + myPlayerScript.playerArmor + "\n";
+        characterMenuLeftText.text += "Gold: " + myPlayerScript.playerGold + "\n";
+        characterMenuLeftText.text += "XP: " + myPlayerScript.playerXp;
+        characterMenuRightText.text = "Attack: " + myPlayerScript.playerDamage + "\n";
+        characterMenuRightText.text += "Speed: " + myPlayerScript.playerSpeed;
 
     }
     
