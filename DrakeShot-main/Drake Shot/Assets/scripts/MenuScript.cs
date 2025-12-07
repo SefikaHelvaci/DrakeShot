@@ -11,6 +11,7 @@ public class MenuScript : MonoBehaviour {
     private GameObject _openedMenu;
     public TextMeshProUGUI skillsMenuKeyRebindButtonText;
     public TextMeshProUGUI interactionKeyRebindButtonText;
+    public TextMeshProUGUI characterMenuKeyRebindButtonText;
     public TextMeshProUGUI characterMenuLeftText;
     public TextMeshProUGUI characterMenuRightText;
     private KeyCode _skillMenuKey = KeyCode.K;
@@ -33,6 +34,7 @@ public class MenuScript : MonoBehaviour {
         
         skillsMenuKeyRebindButtonText.text = "Skills Menu Key: " + _skillMenuKey;
         interactionKeyRebindButtonText.text = "Interaction Key: " + InteractionKey;
+        characterMenuKeyRebindButtonText.text = "Character Menu Key: " + _characterMenuKey;
 
     }
 
@@ -74,6 +76,12 @@ public class MenuScript : MonoBehaviour {
                     case "interactionKey":
                         InteractionKey = a;
                         interactionKeyRebindButtonText.text = "Interaction Key: " + a;
+                        
+                        break;
+                    
+                    case "characterMenuKey":
+                        _characterMenuKey = a;
+                        characterMenuKeyRebindButtonText.text = "Character Menu Key: " + a;
                         
                         break;
                 }
@@ -189,6 +197,18 @@ public class MenuScript : MonoBehaviour {
         
         _rebindTarget = "interactionKey";
         interactionKeyRebindButtonText.text = "Waiting";
+        
+    }
+    
+    //This func. is not private because character menu key rebind button uses it.
+    public void StartCharacterMenuKeyRebinding() {
+        
+        if (!_rebindTarget.Equals("none")) {
+            return;
+        }
+        
+        _rebindTarget = "characterMenuKey";
+        characterMenuKeyRebindButtonText.text = "Waiting";
         
     }
     
