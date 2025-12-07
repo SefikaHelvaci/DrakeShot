@@ -10,7 +10,7 @@ public class SkillButtonScript : MonoBehaviour {
     public string skillType;
     public float effectValue;
 
-    void Start() {
+    private void Start() {
         
         addText.text = addText.text + "\nCost: " + skillCost + "\nValue: " + effectValue;
         

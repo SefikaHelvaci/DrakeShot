@@ -5,8 +5,12 @@ public class WeaponScript : MonoBehaviour {
     public GameObject bulletPrefab;
     public Transform weaponTransform;
 
-    void Update() {
-        
+    private void Update() {
+
+        if (Time.timeScale == 0f) {
+            return;
+        }
+            
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0f; 
         

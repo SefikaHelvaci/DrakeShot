@@ -6,29 +6,30 @@ public class Bullet : MonoBehaviour
     public int damage = 1;
     public float destructionTime = 5f;
 
-    private Rigidbody2D rb;
+    private Rigidbody2D _rb;
 
-    void Start() {
+    private void Start() {
         
-        rb = GetComponent<Rigidbody2D>();
+        _rb = GetComponent<Rigidbody2D>();
         
-        rb.linearVelocity = transform.right * moveSpeed; 
+        _rb.linearVelocity = transform.right * moveSpeed; 
         
         Destroy(gameObject, destructionTime);
         
     }
 
-    void OnTriggerEnter2D(Collider2D other) {
-        
-        if (other.CompareTag("Enemy")) {
-            
-            MobScript myEnemy = other.GetComponent<MobScript>();
-            
-            myEnemy.TakeDamage(damage); 
-            
-            Destroy(gameObject);
+    private void OnTriggerEnter2D(Collider2D other) {
+
+        if (!other.CompareTag("Enemy")) {
+            return;
         }
         
+        MobScript myEnemy = other.GetComponent<MobScript>();
+            
+        myEnemy.TakeDamage(damage); 
+            
+        Destroy(gameObject);
+
     }
     
 }

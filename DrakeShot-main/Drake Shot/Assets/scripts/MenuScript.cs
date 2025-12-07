@@ -10,7 +10,7 @@ public class MenuScript : MonoBehaviour {
     private GameObject _openedMenu;
     public TextMeshProUGUI skillsRebindButtonText;
     private KeyCode _skillMenuKey = KeyCode.K;
-    public static KeyCode _interactionKey = KeyCode.E;
+    public static KeyCode InteractionKey = KeyCode.E;
     private bool _rebinding;
 
     private void Awake() {
@@ -40,20 +40,24 @@ public class MenuScript : MonoBehaviour {
             }
         }
         else {
-            if (Input.anyKeyDown) {
-                foreach (KeyCode k in Enum.GetValues(typeof(KeyCode))) {
-                    if (k == KeyCode.Mouse0 || k == KeyCode.Escape) {
-                        continue;
-                    }
-                    
-                    if (Input.GetKeyDown(k)) {
-                        _rebinding = false;
-
-                        _skillMenuKey = k;
-                        
-                        skillsRebindButtonText.text = "Skills Menu Key: " + k;
-                    }
+            if (!Input.anyKeyDown) {
+                return;
+            }
+            
+            foreach (KeyCode a in Enum.GetValues(typeof(KeyCode))) {
+                if (a == KeyCode.Mouse0 || a == KeyCode.Escape) {
+                    continue;
                 }
+
+                if (!Input.GetKeyDown(a)) {
+                    continue;
+                }
+                
+                _rebinding = false;
+
+                _skillMenuKey = a;
+                        
+                skillsRebindButtonText.text = "Skills Menu Key: " + a;
             }
         }
         
@@ -111,18 +115,22 @@ public class MenuScript : MonoBehaviour {
     
     //This func. is not private because settings button uses it.
     public void OpenSettingsMenu() {
+        
         DoMenuOp(settingsMenu);
+        
     }
     
     //This func. is not private because back button uses it.
     public void CloseSettingsMenuForBackButton() {
 
-        if (!_rebinding) {
-            settingsMenu.SetActive(false);
-            escMenu.SetActive(true);
-            _openedMenu = escMenu;
+        if (_rebinding) {
+            return;
         }
         
+        settingsMenu.SetActive(false);
+        escMenu.SetActive(true);
+        _openedMenu = escMenu;
+
     }
     
     //This func. is not private because skills menu rebind button uses it.

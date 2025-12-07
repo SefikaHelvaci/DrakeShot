@@ -14,18 +14,24 @@ public class MobScript : MonoBehaviour {
         if (health <= 0) {
             Die();
         }
-        
+
+        return;
+
         void Die() {
-        
-            void AutoInstantiate(GameObject a) {
-                Instantiate(a, transform.position + (Vector3)(Random.insideUnitCircle * cycleCoef), Quaternion.identity);
-            }
-        
+            
             AutoInstantiate(goldPrefab);
             AutoInstantiate(xpPrefab);
                 
             Destroy(gameObject);
+            
+            return;
+
+            void AutoInstantiate(GameObject a) {
                 
+                Instantiate(a, transform.position + (Vector3)(Random.insideUnitCircle * cycleCoef), Quaternion.identity);
+                
+            }
+            
         }
         
     }

@@ -9,14 +9,14 @@ public class SceneTeleporterScript : MonoBehaviour {
     
     private void Start() {
 
-        addText.text = MenuScript._interactionKey.ToString();
+        addText.text = MenuScript.InteractionKey.ToString();
         addText.gameObject.gameObject.SetActive(false);
         
     }
     
     private void OnTriggerStay2D(Collider2D other) {
 
-        if (other.CompareTag("Player") && Input.GetKeyDown(MenuScript._interactionKey)) {
+        if (other.CompareTag("Player") && Input.GetKeyDown(MenuScript.InteractionKey)) {
             SceneManager.LoadScene(sceneToGo);
         }
         

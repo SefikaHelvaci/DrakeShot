@@ -16,10 +16,12 @@ public class ShopItemScript : MonoBehaviour {
     
     private void OnTriggerStay2D(Collider2D other) {
         
-        if (other.CompareTag("Player") && Input.GetKeyDown(MenuScript._interactionKey)) {
+        if (other.CompareTag("Player") && Input.GetKeyDown(MenuScript.InteractionKey)) {
             AttemptPurchase();
         }
-        
+
+        return;
+
         void AttemptPurchase() {
 
             PlayerScript myPlayerScript = other.GetComponent<PlayerScript>();
