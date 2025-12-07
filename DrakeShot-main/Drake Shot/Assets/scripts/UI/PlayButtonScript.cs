@@ -1,15 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace UI
-{
-    public class PlayButtonScript : MonoBehaviour {
+public class PlayButtonScript : MonoBehaviour {
     
-        public void PlayGame() {
+    public void PlayGame() {
         
-            SceneManager.LoadScene("Level1"); 
+        SceneManager.LoadScene("Level1"); 
         
-        }
-    
     }
+    
 }

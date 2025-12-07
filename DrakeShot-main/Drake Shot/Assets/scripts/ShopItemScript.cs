@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using UI;
 
 public class ShopItemScript : MonoBehaviour {
     
