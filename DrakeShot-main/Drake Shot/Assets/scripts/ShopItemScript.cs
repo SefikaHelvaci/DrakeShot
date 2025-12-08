@@ -23,10 +23,8 @@ public class ShopItemScript : MonoBehaviour {
         return;
 
         void AttemptPurchase() {
-
-            PlayerScript myPlayerScript = other.GetComponent<PlayerScript>();
             
-            if (myPlayerScript.TryAndBuyItem(price, tag, effectValue)) {
+            if (other.GetComponent<PlayerScript>().TryAndBuyItem(price, tag, effectValue)) {
                 Destroy(gameObject);
             }
             

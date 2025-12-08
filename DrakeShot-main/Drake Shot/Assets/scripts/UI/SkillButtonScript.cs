@@ -8,25 +8,21 @@ public class SkillButtonScript : MonoBehaviour {
     public int skillCost;
     public string skillType;
     public float effectValue;
-    private PlayerScript _myPlayer;
+    private PlayerScript _myPlayerScript;
     private Button _myButton;
 
     private void Start() {
         
-        addText.text = addText.text + "\nCost: " + skillCost + "\nValue: " + effectValue;
+        addText.text += "\nCost: " + skillCost + "\nValue: " + effectValue;
         
-        _myPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
+        _myPlayerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
         _myButton = GetComponent<Button>();
 
     }
     
     public void UnlockSkill() {
         
-        if (_myPlayer == null) {
-            return;
-        }
-        
-        if (_myPlayer.TryAndApplySkillEffect(skillCost, skillType, effectValue)) {
+        if (_myPlayerScript != null && _myPlayerScript.TryAndApplySkillEffect(skillCost, skillType, effectValue)) {
             _myButton.interactable = false;
         }
         

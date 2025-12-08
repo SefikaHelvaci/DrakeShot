@@ -1,11 +1,10 @@
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
-{
+public class Bullet : MonoBehaviour {
+    
     public float moveSpeed = 7f;
     public int damage = 1;
     public float destructionTime = 5f;
-
     private Rigidbody2D _rb;
 
     private void Start() {
@@ -20,15 +19,11 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
 
-        if (!other.CompareTag("Enemy")) {
-            return;
+        if (other.CompareTag("Enemy")) {
+            other.GetComponent<MobScript>().TakeDamage(damage); 
+            
+            Destroy(gameObject);
         }
-        
-        MobScript myEnemy = other.GetComponent<MobScript>();
-            
-        myEnemy.TakeDamage(damage); 
-            
-        Destroy(gameObject);
 
     }
     

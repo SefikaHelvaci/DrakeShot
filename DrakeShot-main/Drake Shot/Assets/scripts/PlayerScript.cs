@@ -21,9 +21,12 @@ public class PlayerScript : MonoBehaviour {
         switch (type) {
             case "Gold":
                 playerGold++;
+                
                 break;
+            
             case "XP":
                 playerXp++;
+                
                 break;
         }
 
@@ -31,25 +34,32 @@ public class PlayerScript : MonoBehaviour {
 
     public bool TryAndBuyItem(int price, string itemType, int effectValue) {
 
-        if (playerGold < price) {
-            return false;
+        if (playerGold >= price) {
+            playerGold -= price;
+            
+            ApplyEffect();
+            
+            return true;
         }
-        
-        playerGold -= price;
-        ApplyEffect();
-        return true;
+
+        return false;
 
         void ApplyEffect() {
 
             switch (itemType) {
                 case "Health":
                     playerHealth += effectValue;
+                    
                     break;
+                
                 case "Weapon":
                     playerDamage = effectValue;
+                    
                     break;
+                
                 case "Armor":
                     playerArmor  += effectValue;
+                    
                     break;
             }
                     
@@ -59,19 +69,22 @@ public class PlayerScript : MonoBehaviour {
 
     public bool TryAndApplySkillEffect(int cost, string skillType, float effectValue) {
 
-        if (playerXp < cost) {
-            return false;
+        if (playerXp >= cost) {
+            playerXp -= cost;
+            
+            ApplyEffect();
+            
+            return true;
         }
-        
-        playerXp -= cost;
-        ApplyEffect();
-        return true;
+
+        return false;
 
         void ApplyEffect() {
 
             switch (skillType) {
                 case "Speed":
                     playerSpeed += effectValue;
+                    
                     break;
             }
                     
