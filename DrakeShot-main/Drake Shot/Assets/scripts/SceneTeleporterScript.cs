@@ -6,6 +6,7 @@ public class SceneTeleporterScript : MonoBehaviour {
 
     public TextMeshPro addText;
     public string sceneToGo;
+    public Vector3 positionToGo;
     
     private void Start() {
 
@@ -15,11 +16,15 @@ public class SceneTeleporterScript : MonoBehaviour {
     }
     
     private void OnTriggerStay2D(Collider2D other) {
-
-        if (other.CompareTag("Player") && Input.GetKeyDown(MenuScript.InteractionKey)) {
-            SceneManager.LoadScene(sceneToGo);
+        
+        if (!other.CompareTag("Player") || !Input.GetKeyDown(MenuScript.InteractionKey)) {
+            return;
         }
         
+        SceneManager.LoadScene(sceneToGo);
+            
+        other.transform.position = positionToGo;
+
     }
     
     private void OnTriggerEnter2D(Collider2D other) {
