@@ -226,7 +226,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -285,6 +285,7 @@ GameObject:
   - component: {fileID: 294818125}
   - component: {fileID: 294818124}
   - component: {fileID: 294818126}
+  - component: {fileID: 294818127}
   m_Layer: 0
   m_Name: bossEnemy
   m_TagString: Untagged
@@ -352,6 +353,21 @@ MonoBehaviour:
   - {fileID: 1647118760}
   - {fileID: 1274612314}
   - {fileID: 62759891}
+--- !u!114 &294818127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294818123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a17c515b6883e04eaebde998142378b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 294818124}
+  target: {fileID: 656772635}
+  speed: 6
 --- !u!1 &554062283
 GameObject:
   m_ObjectHideFlags: 0
@@ -142843,7 +142859,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

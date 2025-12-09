@@ -16,6 +16,16 @@ public class bossPart : MonoBehaviour
         rend = GetComponent<Renderer>();
         brain = GetComponentInParent<bossBrain>();
     }
+    
+    void OnCollisionEnter(Collision collision)
+    {
+        bossPart part = collision.collider.GetComponent<bossPart>();
+        if (part != null)
+        {
+            part.TakeDamage(1);
+            Destroy(gameObject);
+        }
+    }
 
     public void TakeDamage(int damageAmount)
     {
