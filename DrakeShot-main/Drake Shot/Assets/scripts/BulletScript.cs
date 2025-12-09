@@ -20,7 +20,15 @@ public class Bullet : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
 
         if (other.CompareTag("Enemy")) {
-            other.GetComponent<MobScript>().TakeDamage(damage); 
+            if(other.GetComponent<MobScript>() != null)
+            {
+                other.GetComponent<MobScript>().TakeDamage(damage); 
+            }
+            else
+            {
+                other.GetComponent<bossPart>().TakeDamage(damage);
+            }
+            
             
             Destroy(gameObject);
         }

@@ -1,5 +1,11 @@
 using UnityEngine;
 
+//TODO
+//zoom out in the start of the fight
+//make it so that material shows up (wounded material
+//make bullets connect with the beast
+//give it a flying pattern
+
 public class bossPart : MonoBehaviour
 {
     public int maxHP = 100;
@@ -17,6 +23,7 @@ public class bossPart : MonoBehaviour
         brain = GetComponentInParent<bossBrain>();
     }
     
+    /*
     void OnCollisionEnter(Collision collision)
     {
         bossPart part = collision.collider.GetComponent<bossPart>();
@@ -26,6 +33,7 @@ public class bossPart : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    */
 
     public void TakeDamage(int damageAmount)
     {
@@ -39,6 +47,8 @@ public class bossPart : MonoBehaviour
             {
                 rend.material = wounded;
             }
+            
+            brain.amIalive();
         }
     }
 }
