@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 62759888}
   - component: {fileID: 62759890}
   - component: {fileID: 62759889}
+  - component: {fileID: 62759891}
   m_Layer: 0
   m_Name: bossWingR
   m_TagString: Untagged
@@ -258,6 +259,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &62759891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62759887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c65a7c2f4196f9346992f858f68e3e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 10
+  HP: 0
+  wounded: {fileID: 2100000, guid: 93632b9e356bb0242884bcb9192cb7cb, type: 2}
 --- !u!1 &294818123
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 294818125}
   - component: {fileID: 294818124}
+  - component: {fileID: 294818126}
   m_Layer: 0
   m_Name: bossEnemy
   m_TagString: Untagged
@@ -311,7 +328,7 @@ Transform:
   m_GameObject: {fileID: 294818123}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.86, y: 18.01, z: 0.047343243}
+  m_LocalPosition: {x: 4.34, y: 5.91, z: 0.047343243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -319,6 +336,22 @@ Transform:
   - {fileID: 742972871}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &294818126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294818123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc2120db2daeac4891cb7aad1dfeb9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limbs:
+  - {fileID: 1647118760}
+  - {fileID: 1274612314}
+  - {fileID: 62759891}
 --- !u!1 &554062283
 GameObject:
   m_ObjectHideFlags: 0
@@ -142714,6 +142747,7 @@ GameObject:
   - component: {fileID: 1274612310}
   - component: {fileID: 1274612313}
   - component: {fileID: 1274612312}
+  - component: {fileID: 1274612314}
   m_Layer: 0
   m_Name: bossWingL
   m_TagString: Untagged
@@ -142842,6 +142876,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1274612314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274612309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c65a7c2f4196f9346992f858f68e3e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 10
+  HP: 0
+  wounded: {fileID: 2100000, guid: 93632b9e356bb0242884bcb9192cb7cb, type: 2}
 --- !u!1 &1455802533
 GameObject:
   m_ObjectHideFlags: 0
@@ -148440,6 +148489,7 @@ GameObject:
   - component: {fileID: 1647118757}
   - component: {fileID: 1647118759}
   - component: {fileID: 1647118758}
+  - component: {fileID: 1647118760}
   m_Layer: 0
   m_Name: bossBody
   m_TagString: Untagged
@@ -148564,6 +148614,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1647118760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647118756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c65a7c2f4196f9346992f858f68e3e45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 10
+  HP: 0
+  wounded: {fileID: 2100000, guid: 93632b9e356bb0242884bcb9192cb7cb, type: 2}
 --- !u!1 &1835054485
 GameObject:
   m_ObjectHideFlags: 0
