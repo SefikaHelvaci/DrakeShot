@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 62759891}
   m_Layer: 0
   m_Name: bossWingR
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -226,7 +226,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 294818127}
   m_Layer: 0
   m_Name: bossEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -349,6 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc2120db2daeac4891cb7aad1dfeb9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allDead: 0
   limbs:
   - {fileID: 1647118760}
   - {fileID: 1274612314}
@@ -368,6 +369,129 @@ MonoBehaviour:
   rb: {fileID: 294818124}
   target: {fileID: 656772635}
   speed: 6
+--- !u!1001 &295963515
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 204116641378005173, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204116641378005173, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204116641378005173, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204116641378005173, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204116641378005173, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204116641378005173, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204116641378005173, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204116641378005173, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204116641378005173, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204116641378005173, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204116641378005173, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204116641378005173, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 204116641378005173, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204116641378005173, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204116641378005173, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204116641378005173, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204116641378005173, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204116641378005173, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204116641378005173, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 204116641378005173, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6071837940200454710, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_Name
+      value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492343976420836292, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 32a9fcbbda343774492ae29e03712456, type: 3}
 --- !u!1 &554062283
 GameObject:
   m_ObjectHideFlags: 0
@@ -142766,7 +142890,7 @@ GameObject:
   - component: {fileID: 1274612314}
   m_Layer: 0
   m_Name: bossWingL
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142859,7 +142983,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -148508,7 +148632,7 @@ GameObject:
   - component: {fileID: 1647118760}
   m_Layer: 0
   m_Name: bossBody
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148825,3 +148949,4 @@ SceneRoots:
   - {fileID: 617747133}
   - {fileID: 554062286}
   - {fileID: 294818125}
+  - {fileID: 295963515}
