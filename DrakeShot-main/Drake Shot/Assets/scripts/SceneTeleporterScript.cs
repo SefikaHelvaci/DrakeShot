@@ -17,7 +17,7 @@ public class SceneTeleporterScript : MonoBehaviour {
     
     private void OnTriggerStay2D(Collider2D other) {
         
-        if (other.CompareTag("Player") || Input.GetKeyDown(MenuScript.InteractionKey)) {
+        if (other.CompareTag("Player") && Input.GetKeyDown(MenuScript.InteractionKey)) {
             SceneManager.LoadScene(sceneToGo);
             
             other.transform.position = positionToGo;
