@@ -8,6 +8,8 @@ public class MenuScript : MonoBehaviour {
     public GameObject skillsMenu;
     public GameObject settingsMenu;
     public GameObject characterMenu;
+    public GameObject speedSkillsMenu;
+    public GameObject fireSkillsMenu;
     private GameObject _openedMenu;
     public TextMeshProUGUI skillsMenuKeyRebindButtonText;
     public TextMeshProUGUI interactionKeyRebindButtonText;
@@ -209,6 +211,20 @@ public class MenuScript : MonoBehaviour {
         
         _rebindTarget = "characterMenuKey";
         characterMenuKeyRebindButtonText.text = "Waiting";
+        
+    }
+    
+    //This func. is not private because speed skills button uses it.
+    public void OpenSpeedSkillsMenu() {
+        
+        DoMenuOp(speedSkillsMenu);
+        
+    }
+    
+    //This func. is not private because fire skills button uses it.
+    public void OpenFireSkillsMenu() {
+        
+        DoMenuOp(fireSkillsMenu);
         
     }
     
