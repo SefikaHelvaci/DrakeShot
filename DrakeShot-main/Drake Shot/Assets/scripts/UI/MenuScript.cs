@@ -151,10 +151,7 @@ public class MenuScript : MonoBehaviour {
     //This func. is not private because resume button uses it.
     public void CloseEscMenuForResumeButton() {
         
-        escMenu.SetActive(false);
-        _openedMenu = null;
-        
-        Time.timeScale = 1f;
+        DoMenuOp(escMenu);
         
     }
     
