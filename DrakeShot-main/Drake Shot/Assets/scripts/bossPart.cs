@@ -12,14 +12,14 @@ public class bossPart : MonoBehaviour
     public int HP;
     public Material wounded;
     
-    private Renderer rend;
+    private SpriteRenderer rend;
     private bossBrain brain;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         HP = maxHP;
-        rend = GetComponent<Renderer>();
+        rend = GetComponent<SpriteRenderer>();
         brain = GetComponentInParent<bossBrain>();
     }
     

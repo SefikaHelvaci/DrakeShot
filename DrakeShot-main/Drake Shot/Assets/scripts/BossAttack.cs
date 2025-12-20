@@ -177,16 +177,6 @@ public class BossAttack : MonoBehaviour
         if (state != State.Charging)
             state = State.Gathering;
     }
-
-    
-    void OnDrawGizmosSelected()
-    {
-        if (player != null)
-        {
-            Gizmos.color = Color.magenta;
-            Gizmos.DrawWireSphere(player.position, orbitDistance);
-        }
-    }
 }
 
     
