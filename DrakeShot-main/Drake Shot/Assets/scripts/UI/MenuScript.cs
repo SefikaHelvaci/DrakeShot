@@ -5,16 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour {
     
-    public GameObject escMenu;
-    public GameObject skillsMenu;
-    public GameObject settingsMenu;
-    public GameObject characterMenu;
+    [SerializeField] private GameObject escMenu;
+    [SerializeField] private GameObject skillsMenu;
+    [SerializeField] private GameObject settingsMenu;
+    [SerializeField] private GameObject characterMenu;
     private GameObject _openedMenu;
-    public TextMeshProUGUI skillsMenuKeyRebindButtonText;
-    public TextMeshProUGUI interactionKeyRebindButtonText;
-    public TextMeshProUGUI characterMenuKeyRebindButtonText;
-    public TextMeshProUGUI characterMenuLeftText;
-    public TextMeshProUGUI characterMenuRightText;
+    [SerializeField] private TextMeshProUGUI skillsMenuKeyRebindButtonText;
+    [SerializeField] private TextMeshProUGUI interactionKeyRebindButtonText;
+    [SerializeField] private TextMeshProUGUI characterMenuKeyRebindButtonText;
+    [SerializeField] private TextMeshProUGUI characterMenuLeftText;
+    [SerializeField] private TextMeshProUGUI characterMenuRightText;
     private KeyCode _skillMenuKey = KeyCode.K;
     private KeyCode _characterMenuKey = KeyCode.C;
     public static KeyCode InteractionKey = KeyCode.E;
@@ -24,6 +24,10 @@ public class MenuScript : MonoBehaviour {
     private void Awake() {
         
         DontDestroyOnLoad(gameObject);
+        
+        _skillMenuKey = (KeyCode)PlayerPrefs.GetInt("SkillMenuKey", (int)_skillMenuKey);
+        _characterMenuKey = (KeyCode)PlayerPrefs.GetInt("CharacterMenuKey", (int)_characterMenuKey);
+        InteractionKey = (KeyCode)PlayerPrefs.GetInt("InteractionKey", (int)InteractionKey);
         
     }
     
@@ -61,18 +65,21 @@ public class MenuScript : MonoBehaviour {
                     switch (_rebindButton) {
                         case "Skills Menu Key Rebind Button":
                             _skillMenuKey = a;
+                            PlayerPrefs.SetInt("SkillMenuKey", (int)a);
                             skillsMenuKeyRebindButtonText.text = "Skills Menu Key: " + a;
                         
                             break;
                     
                         case "Interaction Key Rebind Button":
                             InteractionKey = a;
+                            PlayerPrefs.SetInt("InteractionKey", (int)a);
                             interactionKeyRebindButtonText.text = "Interaction Key: " + a;
                         
                             break;
                     
                         case "Character Info Menu Key Rebind Button":
                             _characterMenuKey = a;
+                            PlayerPrefs.SetInt("CharacterMenuKey", (int)a);
                             characterMenuKeyRebindButtonText.text = "Character Menu Key: " + a;
                         
                             break;
@@ -80,6 +87,7 @@ public class MenuScript : MonoBehaviour {
                 
                     _rebindButton = "none";
                 
+                    PlayerPrefs.Save();
                 }
             }
         }
