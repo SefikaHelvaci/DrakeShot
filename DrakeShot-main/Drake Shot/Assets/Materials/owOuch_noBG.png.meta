@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6ef23edf863160445a47be0ddca3f39f
+guid: 9e09f512d0467b143b77ec1ce7933e12
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3274918027070553874
-    second: hurtOuch_0
+      213: -148904889537872309
+    second: owOuch_noBG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hurtOuch_0
+      name: owOuch_noBG_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee0cfe7d7672d82d0800000000000000
-      internalID: -3274918027070553874
+      spriteID: b4eb6c9bacbfeedf0800000000000000
+      internalID: -148904889537872309
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      hurtOuch_0: -3274918027070553874
+      owOuch_noBG_0: -148904889537872309
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -10,17 +10,19 @@ public class bossPart : MonoBehaviour
 {
     public int maxHP = 100;
     public int HP;
-    public Material wounded;
-    
+    public Color wound;
+    private Color ogColor;
     private SpriteRenderer rend;
+    
     private bossBrain brain;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         HP = maxHP;
-        rend = GetComponent<SpriteRenderer>();
         brain = GetComponentInParent<bossBrain>();
+        rend = GetComponent<SpriteRenderer>();
+        ogColor = rend.color;
     }
     
     /*
@@ -45,7 +47,10 @@ public class bossPart : MonoBehaviour
             HP = 0;
             if (brain.limbsAlive(this))
             {
-                rend.material = wounded;
+                Color wounded = wound;
+                wounded.a = 1.0f;
+                rend.color = wounded;
+                
             }
             
             brain.amIalive();

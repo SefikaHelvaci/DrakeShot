@@ -274,7 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 10
   HP: 0
-  wounded: {fileID: 2100000, guid: 93632b9e356bb0242884bcb9192cb7cb, type: 2}
+  wound: {r: 0.98823535, g: 0.43137258, b: 0.2509804, a: 0}
 --- !u!114 &62759892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143159,7 +143159,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -143206,7 +143206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 10
   HP: 0
-  wounded: {fileID: 2100000, guid: 93632b9e356bb0242884bcb9192cb7cb, type: 2}
+  wound: {r: 0.98823535, g: 0.43137258, b: 0.2509804, a: 0}
 --- !u!114 &1274612315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148959,7 +148959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 10
   HP: 0
-  wounded: {fileID: 2100000, guid: 93632b9e356bb0242884bcb9192cb7cb, type: 2}
+  wound: {r: 0.98823535, g: 0.43137258, b: 0.2509804, a: 0}
 --- !u!114 &1647118761
 MonoBehaviour:
   m_ObjectHideFlags: 0
