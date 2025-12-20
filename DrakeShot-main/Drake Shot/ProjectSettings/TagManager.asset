@@ -12,6 +12,7 @@ TagManager:
   - Armor
   - Walls
   - Hazard
+  - Canvas
   layers:
   - Default
   - TransparentFX

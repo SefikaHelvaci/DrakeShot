@@ -2,13 +2,26 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
     
-    //Make them private after test
-    public int playerHealth = 10;
-    public int playerDamage;
-    public int playerArmor;
-    public int playerGold;
-    public int playerXp;
-    public float playerSpeed = 5.0f;
+    [SerializeField] private int playerHealth = 100;
+    [SerializeField] private int playerMaxHp = 100;
+    [SerializeField] private int playerDamage = 1;
+    [SerializeField] private int playerArmorLevel = 0;
+    [SerializeField] private int playerGold = 0;
+    [SerializeField] private int playerXp = 0;
+    [SerializeField] private float playerSpeed = 5.0f;
+
+    public int PlayerHealth {
+        
+        get => playerHealth;
+        set => playerHealth = Mathf.Clamp(value, 0, playerMaxHp);
+        
+    }
+    public int PlayerMaxHp => playerMaxHp;
+    public int PlayerDamage => playerDamage;
+    public int PlayerArmorLevel => playerArmorLevel;
+    public int PlayerGold => playerGold;
+    public int PlayerXp => playerXp;
+    public float PlayerSpeed => playerSpeed;
 
     private void Awake() {
         
@@ -56,11 +69,6 @@ public class PlayerScript : MonoBehaviour {
                     playerDamage = effectValue;
                     
                     break;
-                
-                case "Armor":
-                    playerArmor  += effectValue;
-                    
-                    break;
             }
                     
         }
@@ -91,5 +99,7 @@ public class PlayerScript : MonoBehaviour {
         }
         
     }
+    
+    
     
 }

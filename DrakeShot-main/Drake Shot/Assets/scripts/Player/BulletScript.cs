@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
     
-    public float moveSpeed = 7f;
-    public int damage = 1;
-    public float destructionTime = 5f;
+    [SerializeField] private float moveSpeed = 7f;
+    [SerializeField] private int damage = 1;
+    [SerializeField] private float destructionTime = 5f;
     private Rigidbody2D _rb;
 
     private void Start() {
@@ -28,7 +28,6 @@ public class Bullet : MonoBehaviour {
             {
                 other.GetComponent<bossPart>().TakeDamage(damage);
             }
-            
             
             Destroy(gameObject);
         }

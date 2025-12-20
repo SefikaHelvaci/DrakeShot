@@ -35,14 +35,14 @@ public class bullet : MonoBehaviour
     {
         if (col.CompareTag("Player"))
         {
-            getHit hitScript = col.GetComponent<getHit>();
+            PlayerScript myPlayerScript = col.GetComponent<PlayerScript>();
 
-            if (hitScript != null)
+            if (myPlayerScript != null)
             {
-                hitScript.HP -= damage;
-                Debug.Log("Bullet hit player. HP now: " + hitScript.HP);
+                myPlayerScript.PlayerHealth -= damage;
+                Debug.Log("Bullet hit player. HP now: " + myPlayerScript.PlayerHealth);
 
-                if (hitScript.HP <= 0)
+                if (myPlayerScript.PlayerHealth <= 0)
                 {
                     Debug.Log("Player died!");
                     Destroy(col.gameObject);

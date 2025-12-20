@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class WeaponScript : MonoBehaviour {
     
-    public GameObject bulletPrefab;
-    public Transform weaponTransform;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform weaponTransform;
 
     private void Update() {
 

@@ -5,25 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour {
     
-    public GameObject escMenu;
-    public GameObject skillsMenu;
-    public GameObject settingsMenu;
-    public GameObject characterMenu;
+    [SerializeField] private GameObject escMenu;
+    [SerializeField] private GameObject skillsMenu;
+    [SerializeField] private GameObject settingsMenu;
+    [SerializeField] private GameObject characterMenu;
     private GameObject _openedMenu;
-    public TextMeshProUGUI skillsMenuKeyRebindButtonText;
-    public TextMeshProUGUI interactionKeyRebindButtonText;
-    public TextMeshProUGUI characterMenuKeyRebindButtonText;
-    public TextMeshProUGUI characterMenuLeftText;
-    public TextMeshProUGUI characterMenuRightText;
+    [SerializeField] private TextMeshProUGUI skillsMenuKeyRebindButtonText;
+    [SerializeField] private TextMeshProUGUI interactionKeyRebindButtonText;
+    [SerializeField] private TextMeshProUGUI characterMenuKeyRebindButtonText;
+    [SerializeField] private TextMeshProUGUI characterMenuLeftText;
+    [SerializeField] private TextMeshProUGUI characterMenuRightText;
     private KeyCode _skillMenuKey = KeyCode.K;
     private KeyCode _characterMenuKey = KeyCode.C;
-    public static KeyCode InteractionKey = KeyCode.E;
+    private KeyCode _interactionKey = KeyCode.E;
     private string _rebindButton = "none";
     private GameObject _myPlayer;
+    
+    public KeyCode InteractionKey => _interactionKey;
 
     private void Awake() {
         
         DontDestroyOnLoad(gameObject);
+        
+        _skillMenuKey = (KeyCode)PlayerPrefs.GetInt("SkillMenuKey", (int)_skillMenuKey);
+        _characterMenuKey = (KeyCode)PlayerPrefs.GetInt("CharacterMenuKey", (int)_characterMenuKey);
+        _interactionKey = (KeyCode)PlayerPrefs.GetInt("InteractionKey", (int)_interactionKey);
         
     }
     
@@ -32,7 +38,7 @@ public class MenuScript : MonoBehaviour {
         _myPlayer = GameObject.FindGameObjectWithTag("Player");
         
         skillsMenuKeyRebindButtonText.text = "Skills Menu Key: " + _skillMenuKey;
-        interactionKeyRebindButtonText.text = "Interaction Key: " + InteractionKey;
+        interactionKeyRebindButtonText.text = "Interaction Key: " + _interactionKey;
         characterMenuKeyRebindButtonText.text = "Character Menu Key: " + _characterMenuKey;
 
     }
@@ -61,18 +67,21 @@ public class MenuScript : MonoBehaviour {
                     switch (_rebindButton) {
                         case "Skills Menu Key Rebind Button":
                             _skillMenuKey = a;
+                            PlayerPrefs.SetInt("SkillMenuKey", (int)a);
                             skillsMenuKeyRebindButtonText.text = "Skills Menu Key: " + a;
                         
                             break;
                     
                         case "Interaction Key Rebind Button":
-                            InteractionKey = a;
+                            _interactionKey = a;
+                            PlayerPrefs.SetInt("InteractionKey", (int)a);
                             interactionKeyRebindButtonText.text = "Interaction Key: " + a;
                         
                             break;
                     
                         case "Character Info Menu Key Rebind Button":
                             _characterMenuKey = a;
+                            PlayerPrefs.SetInt("CharacterMenuKey", (int)a);
                             characterMenuKeyRebindButtonText.text = "Character Menu Key: " + a;
                         
                             break;
@@ -80,6 +89,7 @@ public class MenuScript : MonoBehaviour {
                 
                     _rebindButton = "none";
                 
+                    PlayerPrefs.Save();
                 }
             }
         }
@@ -130,12 +140,12 @@ public class MenuScript : MonoBehaviour {
         
         PlayerScript myPlayerScript = _myPlayer.GetComponent<PlayerScript>();
         
-        characterMenuLeftText.text = "Health: " + myPlayerScript.playerHealth + " / " + "100" + "\n";
-        characterMenuLeftText.text += "Armor: " + myPlayerScript.playerArmor + "\n";
-        characterMenuLeftText.text += "Gold: " + myPlayerScript.playerGold + "\n";
-        characterMenuLeftText.text += "XP: " + myPlayerScript.playerXp;
-        characterMenuRightText.text = "Attack: " + myPlayerScript.playerDamage + "\n";
-        characterMenuRightText.text += "Speed: " + myPlayerScript.playerSpeed;
+        characterMenuLeftText.text = "Health: " + myPlayerScript.PlayerHealth + " / " + "100" + "\n";
+        characterMenuLeftText.text += "Armor: " + myPlayerScript.PlayerArmorLevel + "\n";
+        characterMenuLeftText.text += "Gold: " + myPlayerScript.PlayerGold + "\n";
+        characterMenuLeftText.text += "XP: " + myPlayerScript.PlayerXp;
+        characterMenuRightText.text = "Attack: " + myPlayerScript.PlayerDamage + "\n";
+        characterMenuRightText.text += "Speed: " + myPlayerScript.PlayerSpeed;
 
     }
     

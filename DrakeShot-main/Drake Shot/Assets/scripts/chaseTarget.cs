@@ -10,9 +10,9 @@ public class chaseTarget : MonoBehaviour
     
     //public GameObject movingObject;  
     //public GameObject targetPosition; 
-    public Rigidbody2D rb;
-    public Transform target;
-    public float speed = 1f; 
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Transform target;
+    [SerializeField] private float speed = 1f; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

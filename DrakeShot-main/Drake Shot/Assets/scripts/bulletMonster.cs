@@ -1,15 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class bulletMonster : MonoBehaviour {
 
-    [SerializeField]
-    GameObject bullet;
+    [SerializeField] private GameObject bullet;
     
-    //private these after testing
-    public float fireRate;
-    public float nextFire;
+    [SerializeField] private float fireRate;
+    [SerializeField] private float nextFire;
 
     // Use this for initialization
     void Start () {

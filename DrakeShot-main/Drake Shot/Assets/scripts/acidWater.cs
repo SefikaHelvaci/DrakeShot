@@ -26,23 +26,23 @@ public class acidWater : MonoBehaviour
         if (col.CompareTag("Player"))
         {
 
-            getHit hitScript = col.GetComponent<getHit>();
-            if (hitScript != null)
+            PlayerScript myPlayerScript = col.GetComponent<PlayerScript>();
+            if (myPlayerScript != null)
             {
-                StartCoroutine(waterDamage(hitScript));
+                StartCoroutine(waterDamage(myPlayerScript));
             }
         }
     }
 
 
-    IEnumerator waterDamage(getHit hitScript)
+    IEnumerator waterDamage(PlayerScript myPlayerScript)
     {
-        hitScript.HP -= damage;
-        Debug.Log("Player got soaked by water. HP now: " + hitScript.HP);
+        myPlayerScript.PlayerHealth -= damage;
+        Debug.Log("Player got soaked by water. HP now: " + myPlayerScript.PlayerHealth);
         
-        if(hitScript.HP <= 0){
+        if(myPlayerScript.PlayerHealth <= 0){
             Debug.Log("Player drowned :(");
-            Destroy(hitScript.gameObject);
+            Destroy(myPlayerScript.gameObject);
             yield break;
         }
         yield return new WaitForSeconds(hitSpeed);
