@@ -12247,10 +12247,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9175947482702054522, guid: 70530be0c365bb646a5f4bf3862bda1f,
+    - target: {fileID: 8241648075574320432, guid: 70530be0c365bb646a5f4bf3862bda1f,
         type: 3}
-      propertyPath: m_text
-      value: 
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241648075574320432, guid: 70530be0c365bb646a5f4bf3862bda1f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241648075574320432, guid: 70530be0c365bb646a5f4bf3862bda1f,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -105541197
       objectReference: {fileID: 0}
     - target: {fileID: 9175947482702054522, guid: 70530be0c365bb646a5f4bf3862bda1f,
         type: 3}

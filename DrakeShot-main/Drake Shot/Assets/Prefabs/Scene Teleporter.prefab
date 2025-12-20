@@ -94,6 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addText: {fileID: 9175947482702054522}
   sceneToGo: Level1
+  positionToGo: {x: 0, y: 0, z: 0}
 --- !u!1 &8639890068486424911
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,9 +173,9 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 16
+  m_SortingLayerID: -105541197
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &9175947482702054522
 MonoBehaviour:
