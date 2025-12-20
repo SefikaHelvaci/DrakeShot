@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4808570431412087738}
   - component: {fileID: 7629299131750771110}
   - component: {fileID: 6943369809581123527}
+  - component: {fileID: -4270730568303669739}
   m_Layer: 0
   m_Name: monsterPlaceHolder
   m_TagString: Enemy
@@ -104,12 +105,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b8c0bd5a4cbfe4b957b18ec5319ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
-  cycleCoef: 1
   goldPrefab: {fileID: 3303621969685416096, guid: beaf10b9047c9ab459200f0498262da2,
     type: 3}
   xpPrefab: {fileID: 5752143571989013688, guid: 4570309abf6eb9b4a80d9dd450f8bd4b,
     type: 3}
+  health: 10
+  cycleCoef: 1
 --- !u!58 &4808570431412087738
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -188,3 +189,17 @@ MonoBehaviour:
   rb: {fileID: 7629299131750771110}
   target: {fileID: 0}
   speed: 5
+--- !u!114 &-4270730568303669739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5655477083236460136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0639539dd59f47348afb7a18413014a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 4241072281413577040}
+  recoilDuration: 1.5

@@ -24,6 +24,18 @@ public class getHit : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             hurt(monsterDMG);
+            
+            recoilScript recoil = 
+                collision.gameObject.GetComponent<recoilScript>();
+
+            if (recoil != null)
+            {
+                float strength = 5f; 
+                
+                Vector3 hitDirection = (collision.transform.position - transform.position).normalized; 
+                
+                recoil.onHit(strength, hitDirection);
+            }
         }
     }
 
