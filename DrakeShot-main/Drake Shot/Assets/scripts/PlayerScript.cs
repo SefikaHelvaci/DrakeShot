@@ -3,9 +3,10 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour {
     
     //Make them private after test
-    public int playerHealth = 10;
+    public int playerHealth = 100;
+    public int playerMaxHp = 100;
     public int playerDamage;
-    public int playerArmor;
+    public int playerArmorLevel;
     public int playerGold;
     public int playerXp;
     public float playerSpeed = 5.0f;
@@ -54,11 +55,6 @@ public class PlayerScript : MonoBehaviour {
                 
                 case "Weapon":
                     playerDamage = effectValue;
-                    
-                    break;
-                
-                case "Armor":
-                    playerArmor  += effectValue;
                     
                     break;
             }

@@ -3,35 +3,28 @@ using UnityEngine.UI;
 
 public class hpBar : MonoBehaviour
 {
-    public Slider slider;
-    public getHit playerHP;
+    private Slider _slider;
+    private PlayerScript _myPlayerScript;
 
     void Start()
     {
-        if (slider == null)
-            slider = GetComponent<Slider>();
+        if (_slider == null)
+            _slider = GetComponent<Slider>();
         
-        if (playerHP == null)
-        {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null)
-                playerHP = player.GetComponent<getHit>();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null) {
+
+            _myPlayerScript = player.GetComponent<PlayerScript>();
+            
         }
 
-        if (playerHP == null)
-        {
-            Debug.LogError("HealthBar: Could not find getHit script on Player.");
-            return;
-        }
-
-        slider.minValue = 0;
-        slider.maxValue = playerHP.maxHP;
-        slider.value = playerHP.HP;
+        _slider.minValue = 0;
+        _slider.maxValue = _myPlayerScript.playerMaxHp;
+        _slider.value = _myPlayerScript.playerHealth;
     }
 
     void Update()
     {
-        if (playerHP != null)
-            slider.value = playerHP.HP;   // update every frame
+        _slider.value = _myPlayerScript.playerHealth;   // update every frame
     }
 }
