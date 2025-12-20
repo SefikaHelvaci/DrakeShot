@@ -221,7 +221,6 @@ GameObject:
   - component: {fileID: 710448591}
   - component: {fileID: 710448590}
   - component: {fileID: 710448589}
-  - component: {fileID: 710448588}
   m_Layer: 5
   m_Name: Tutorial Button
   m_TagString: Untagged
@@ -249,18 +248,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &710448588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 710448586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24f278219fe216f4aa0f961519456270, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &710448589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,16 +292,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 710448588}
-        m_TargetAssemblyTypeName: TutorialScript, Assembly-CSharp
-        m_MethodName: PlayTutorial
-        m_Mode: 1
+      - m_Target: {fileID: 2073936923}
+        m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
+        m_MethodName: OpenScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Arena
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &710448590
@@ -1003,7 +990,6 @@ GameObject:
   - component: {fileID: 1453548341}
   - component: {fileID: 1453548340}
   - component: {fileID: 1453548339}
-  - component: {fileID: 1453548338}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -1031,18 +1017,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1453548338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1453548336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c3b47febf7fbee47af988acb320e46e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1453548339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1087,8 +1061,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1453548338}
-        m_TargetAssemblyTypeName: QuitButtonScript, Assembly-CSharp
+      - m_Target: {fileID: 2073936923}
+        m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -1214,7 +1188,6 @@ GameObject:
   - component: {fileID: 1647917183}
   - component: {fileID: 1647917182}
   - component: {fileID: 1647917181}
-  - component: {fileID: 1647917180}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -1242,18 +1215,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1647917180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647917178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd3db4c337fe3ba409daa6cbb39a5190, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1647917181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1298,16 +1259,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1647917180}
-        m_TargetAssemblyTypeName: PlayButtonScript, Assembly-CSharp
-        m_MethodName: PlayGame
-        m_Mode: 1
+      - m_Target: {fileID: 2073936923}
+        m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
+        m_MethodName: OpenScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Level1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1647917182
@@ -1360,6 +1321,7 @@ GameObject:
   - component: {fileID: 2073936921}
   - component: {fileID: 2073936920}
   - component: {fileID: 2073936919}
+  - component: {fileID: 2073936923}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1451,6 +1413,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2073936923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073936918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6b008a3484053740bf4c87e0da241b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

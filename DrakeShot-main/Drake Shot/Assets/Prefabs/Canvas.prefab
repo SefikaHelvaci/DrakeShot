@@ -259,11 +259,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5803034929279628226}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: StartSkillsMenuKeyRebinding
-        m_Mode: 1
+        m_MethodName: KeyRebinding
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1060859669707020431}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -723,11 +723,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5803034929279628226}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: StartCharacterMenuKeyRebinding
-        m_Mode: 1
+        m_MethodName: KeyRebinding
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 6255027602365376770}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1093,7 +1093,6 @@ GameObject:
   - component: {fileID: 2661090157634699465}
   - component: {fileID: 7381681050709514207}
   - component: {fileID: 2072971424103349087}
-  - component: {fileID: 1357875389573456595}
   m_Layer: 5
   m_Name: Main Menu Button
   m_TagString: Untagged
@@ -1203,8 +1202,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1357875389573456595}
-        m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
+      - m_Target: {fileID: 5803034929279628226}
+        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
         m_MethodName: GoToMainMenu
         m_Mode: 1
         m_Arguments:
@@ -1215,18 +1214,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1357875389573456595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2217526347624446472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6b008a3484053740bf4c87e0da241b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2685153903957578857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,11 +1399,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5803034929279628226}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: StartInteractionKeyRebinding
-        m_Mode: 1
+        m_MethodName: KeyRebinding
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 827684284316059465}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1545,11 +1532,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5803034929279628226}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: OpenSpeedSkillsMenu
-        m_Mode: 1
+        m_MethodName: MenuToDo
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 7438479351182585320}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2356,12 +2343,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5803034929279628226}
-        m_TargetAssemblyTypeName: EscMenuScript, Assembly-CSharp
-        m_MethodName: CloseEscMenuForResumeButton
-        m_Mode: 1
+        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
+        m_MethodName: MenuToDo
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 8912808320236934827}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2701,11 +2688,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5803034929279628226}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: OpenSettingsMenu
-        m_Mode: 1
+        m_MethodName: MenuToDo
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 4225692540640540136}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3241,8 +3228,6 @@ MonoBehaviour:
   skillsMenu: {fileID: 1478241055720621143}
   settingsMenu: {fileID: 4225692540640540136}
   characterMenu: {fileID: 3922979837677570128}
-  speedSkillsMenu: {fileID: 7438479351182585320}
-  fireSkillsMenu: {fileID: 3725687187809859414}
   skillsMenuKeyRebindButtonText: {fileID: 1060859669707020431}
   interactionKeyRebindButtonText: {fileID: 827684284316059465}
   characterMenuKeyRebindButtonText: {fileID: 6255027602365376770}
@@ -3708,11 +3693,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5803034929279628226}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: OpenFireSkillsMenu
-        m_Mode: 1
+        m_MethodName: MenuToDo
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 3725687187809859414}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

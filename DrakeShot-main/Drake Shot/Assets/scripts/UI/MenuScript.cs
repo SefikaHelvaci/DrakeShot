@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour {
     
@@ -8,8 +9,6 @@ public class MenuScript : MonoBehaviour {
     public GameObject skillsMenu;
     public GameObject settingsMenu;
     public GameObject characterMenu;
-    public GameObject speedSkillsMenu;
-    public GameObject fireSkillsMenu;
     private GameObject _openedMenu;
     public TextMeshProUGUI skillsMenuKeyRebindButtonText;
     public TextMeshProUGUI interactionKeyRebindButtonText;
@@ -19,20 +18,18 @@ public class MenuScript : MonoBehaviour {
     private KeyCode _skillMenuKey = KeyCode.K;
     private KeyCode _characterMenuKey = KeyCode.C;
     public static KeyCode InteractionKey = KeyCode.E;
-    private string _rebindTarget = "none";
+    private string _rebindButton = "none";
+    private GameObject _myPlayer;
 
     private void Awake() {
         
         DontDestroyOnLoad(gameObject);
         
-        escMenu.SetActive(false);
-        skillsMenu.SetActive(false);
-        settingsMenu.SetActive(false);
-        characterMenu.SetActive(false);
-        
     }
     
     private void Start() {
+        
+        _myPlayer = GameObject.FindGameObjectWithTag("Player");
         
         skillsMenuKeyRebindButtonText.text = "Skills Menu Key: " + _skillMenuKey;
         interactionKeyRebindButtonText.text = "Interaction Key: " + InteractionKey;
@@ -42,7 +39,7 @@ public class MenuScript : MonoBehaviour {
 
     private void Update() {
 
-        if (_rebindTarget.Equals("none")) {
+        if (_rebindButton.Equals("none")) {
             if (Input.GetKeyDown(KeyCode.Escape)) {
                 DoMenuOp(escMenu);
             }
@@ -55,41 +52,35 @@ public class MenuScript : MonoBehaviour {
             }
         }
         else {
-            if (!Input.anyKeyDown) {
-                return;
-            }
-            
-            foreach (KeyCode a in Enum.GetValues(typeof(KeyCode))) {
-                if (a == KeyCode.Mouse0 || a == KeyCode.Escape) {
-                    continue;
-                }
+            if (Input.anyKeyDown) {
+                foreach (KeyCode a in Enum.GetValues(typeof(KeyCode))) {
+                    if (a == KeyCode.Mouse0 || a == KeyCode.Escape || !Input.GetKeyDown(a)) {
+                        continue;
+                    }
 
-                if (!Input.GetKeyDown(a)) {
-                    continue;
-                }
-
-                switch (_rebindTarget) {
-                    case "skillsMenuKey":
-                        _skillMenuKey = a;
-                        skillsMenuKeyRebindButtonText.text = "Skills Menu Key: " + a;
+                    switch (_rebindButton) {
+                        case "Skills Menu Key Rebind Button":
+                            _skillMenuKey = a;
+                            skillsMenuKeyRebindButtonText.text = "Skills Menu Key: " + a;
                         
-                        break;
+                            break;
                     
-                    case "interactionKey":
-                        InteractionKey = a;
-                        interactionKeyRebindButtonText.text = "Interaction Key: " + a;
+                        case "Interaction Key Rebind Button":
+                            InteractionKey = a;
+                            interactionKeyRebindButtonText.text = "Interaction Key: " + a;
                         
-                        break;
+                            break;
                     
-                    case "characterMenuKey":
-                        _characterMenuKey = a;
-                        characterMenuKeyRebindButtonText.text = "Character Menu Key: " + a;
+                        case "Character Info Menu Key Rebind Button":
+                            _characterMenuKey = a;
+                            characterMenuKeyRebindButtonText.text = "Character Menu Key: " + a;
                         
-                        break;
+                            break;
+                    }
+                
+                    _rebindButton = "none";
+                
                 }
-                
-                _rebindTarget = "none";
-                
             }
         }
         
@@ -137,7 +128,7 @@ public class MenuScript : MonoBehaviour {
     
     private void UpdateCharacterMenuTexts() {
         
-        PlayerScript myPlayerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
+        PlayerScript myPlayerScript = _myPlayer.GetComponent<PlayerScript>();
         
         characterMenuLeftText.text = "Health: " + myPlayerScript.playerHealth + " / " + "100" + "\n";
         characterMenuLeftText.text += "Armor: " + myPlayerScript.playerArmor + "\n";
@@ -148,24 +139,32 @@ public class MenuScript : MonoBehaviour {
 
     }
     
-    //This func. is not private because resume button uses it.
-    public void CloseEscMenuForResumeButton() {
+    //This func. is not private because some buttons uses it.
+    public void MenuToDo(GameObject menu) {
         
-        DoMenuOp(escMenu);
+        DoMenuOp(menu);
         
     }
     
-    //This func. is not private because settings button uses it.
-    public void OpenSettingsMenu() {
+    //This func. is not private main menu button uses it.
+    public void GoToMainMenu() {
         
-        DoMenuOp(settingsMenu);
+        Time.timeScale = 1f;
+        
+        Destroy(transform.root.gameObject);
+        
+        if (_myPlayer != null) {
+            Destroy(_myPlayer);
+        }
+        
+        SceneManager.LoadScene("Main Menu");
         
     }
     
     //This func. is not private because back button uses it.
     public void CloseSettingsMenuForBackButton() {
 
-        if (!_rebindTarget.Equals("none")) {
+        if (!_rebindButton.Equals("none")) {
             return;
         }
         
@@ -175,53 +174,15 @@ public class MenuScript : MonoBehaviour {
 
     }
     
-    //This func. is not private because skills menu key rebind button uses it.
-    public void StartSkillsMenuKeyRebinding() {
+    //This func. is not private because menu key rebind buttons uses it.
+    public void KeyRebinding(TextMeshProUGUI rebindButtonText) {
         
-        if (!_rebindTarget.Equals("none")) {
+        if (!_rebindButton.Equals("none")) {
             return;
         }
         
-        _rebindTarget = "skillsMenuKey";
-        skillsMenuKeyRebindButtonText.text = "Waiting";
-        
-    }
-    
-    //This func. is not private because interaction key rebind button uses it.
-    public void StartInteractionKeyRebinding() {
-        
-        if (!_rebindTarget.Equals("none")) {
-            return;
-        }
-        
-        _rebindTarget = "interactionKey";
-        interactionKeyRebindButtonText.text = "Waiting";
-        
-    }
-    
-    //This func. is not private because character menu key rebind button uses it.
-    public void StartCharacterMenuKeyRebinding() {
-        
-        if (!_rebindTarget.Equals("none")) {
-            return;
-        }
-        
-        _rebindTarget = "characterMenuKey";
-        characterMenuKeyRebindButtonText.text = "Waiting";
-        
-    }
-    
-    //This func. is not private because speed skills button uses it.
-    public void OpenSpeedSkillsMenu() {
-        
-        DoMenuOp(speedSkillsMenu);
-        
-    }
-    
-    //This func. is not private because fire skills button uses it.
-    public void OpenFireSkillsMenu() {
-        
-        DoMenuOp(fireSkillsMenu);
+        rebindButtonText.text = "Waiting";
+        _rebindButton = rebindButtonText.transform.parent.name;
         
     }
     

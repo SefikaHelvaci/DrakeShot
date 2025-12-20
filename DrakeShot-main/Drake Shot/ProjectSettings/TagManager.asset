@@ -33,9 +33,9 @@ TagManager:
   - 
   - 
   - 
-  - Layer 1
-  - Layer 2
-  - Layer 3
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -49,14 +49,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Layer 1
+  - name: Background
     uniqueID: 2425651459
     locked: 0
-  - name: Layer 2
+  - name: Walls
     uniqueID: 4250941897
     locked: 0
-  - name: Layer 3
+  - name: Objects
     uniqueID: 4189426099
+    locked: 0
+  - name: Actors
+    uniqueID: 3816221421
+    locked: 0
+  - name: Projectiles
+    uniqueID: 1595168865
     locked: 0
   m_RenderingLayers:
   - Default

@@ -3,25 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour {
 
-    private GameObject _myPlayer;
-    
-    private void Start() {
+    public void OpenScene(string sceneName) {
         
-        _myPlayer = GameObject.FindGameObjectWithTag("Player");
+        SceneManager.LoadScene(sceneName);
         
     }
-
-    public void GoToMainMenu() {
+    
+    public void QuitGame() {
         
-        Time.timeScale = 1f;
-        
-        Destroy(transform.root.gameObject);
-        
-        if (_myPlayer != null) {
-            Destroy(_myPlayer);
-        }
-        
-        SceneManager.LoadScene("Main Menu");
+        Application.Quit();
         
     }
     
