@@ -3,9 +3,9 @@ using TMPro;
 
 public class ShopItemScript : MonoBehaviour {
     
-    public int price;
-    public int effectValue;
-    public TextMeshPro addText;
+    [SerializeField] private TextMeshPro addText;
+    [SerializeField] private int price;
+    [SerializeField] private int effectValue;
     private MenuScript _myMenuScript;
 
     private void Start() {

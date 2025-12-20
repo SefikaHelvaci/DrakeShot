@@ -1,12 +1,11 @@
-using System;
 using UnityEngine;
 
 public class getHit : MonoBehaviour
 {
 
-    public int monsterDMG = 1;
-
     private PlayerScript _myPlayerScript;
+    
+    public int monsterDMG = 1;
     
     //its possible that we could just leave the dmg as it is 
     //but increase the projectiles instead
@@ -30,14 +29,14 @@ public class getHit : MonoBehaviour
 
     private void hurt(int dmg)
     {
-        _myPlayerScript.playerHealth -= dmg;
-        Debug.Log($"You crashed into a monster! -1 HP. Curr HP: {_myPlayerScript.playerHealth}");
+        _myPlayerScript.PlayerHealth -= dmg;
+        Debug.Log($"You crashed into a monster! -1 HP. Curr HP: {_myPlayerScript.PlayerHealth}");
 
-        if (_myPlayerScript.playerHealth <= 0)
+        if (_myPlayerScript.PlayerHealth <= 0)
         {
-            _myPlayerScript.playerHealth = 0;
+            _myPlayerScript.PlayerHealth = 0;
         }
-        if (_myPlayerScript.playerHealth == 0)
+        if (_myPlayerScript.PlayerHealth == 0)
         {
             Debug.Log($"YOU DIED");
             Destroy(gameObject);

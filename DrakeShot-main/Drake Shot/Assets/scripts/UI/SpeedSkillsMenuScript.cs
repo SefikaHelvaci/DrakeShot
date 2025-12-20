@@ -6,15 +6,15 @@ public class SpeedSkillsMenuScript : MonoBehaviour {
     
     private PlayerScript _myPlayerScript;
     
-    public Button walkSpeedSkillButton;
-    public TextMeshProUGUI walkSpeedSkillAddText;
-    public int walkSpeedSkillCost;
-    public float walkSpeedSkillEffectValue;
+    [SerializeField] private Button walkSpeedSkillButton;
+    [SerializeField] private TextMeshProUGUI walkSpeedSkillAddText;
+    [SerializeField] private int walkSpeedSkillCost;
+    [SerializeField] private float walkSpeedSkillEffectValue;
     
-    public Button dodgeSkillButton;
-    public TextMeshProUGUI dodgeSkillAddText;
-    public int dodgeSkillCost;
-    public float dodgeSkillEffectValue;
+    [SerializeField] private Button dodgeSkillButton;
+    [SerializeField] private TextMeshProUGUI dodgeSkillAddText;
+    [SerializeField] private int dodgeSkillCost;
+    [SerializeField] private float dodgeSkillEffectValue;
 
     private void Start() {
         

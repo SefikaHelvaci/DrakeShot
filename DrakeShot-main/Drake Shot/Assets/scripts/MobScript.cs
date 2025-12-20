@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class MobScript : MonoBehaviour {
     
-    public int health = 10;
-    public float cycleCoef = 1f;
-    public GameObject goldPrefab;
-    public GameObject xpPrefab;
+    [SerializeField] private GameObject goldPrefab;
+    [SerializeField] private GameObject xpPrefab;
+    [SerializeField] private int health = 10;
+    [SerializeField] private float cycleCoef = 1f;
     
     public void TakeDamage(int damageAmount) {
         

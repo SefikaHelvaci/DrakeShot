@@ -3,15 +3,20 @@ using UnityEngine;
 public class playerControl : MonoBehaviour
 {
     
-    public PlayerScript myPlayer;
     public bool canMoveDiagonally = true;
 
     // Private variables 
     private float speed; 
     private Rigidbody2D rb; 
     private Vector2 movement; 
-    private bool isMovingHorizontally = true; 
+    private bool isMovingHorizontally = true;
+    private PlayerScript _myPlayerScript;
 
+    private void Awake() {
+        
+        _myPlayerScript = GetComponent<PlayerScript>();
+        
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -56,7 +61,7 @@ public class playerControl : MonoBehaviour
 
     void FixedUpdate()
     {
-        speed = myPlayer.playerSpeed;
+        speed = _myPlayerScript.PlayerSpeed;
         rb.linearVelocity = movement * speed;
     }
 

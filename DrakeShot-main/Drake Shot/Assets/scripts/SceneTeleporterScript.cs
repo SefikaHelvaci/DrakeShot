@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneTeleporterScript : MonoBehaviour {
 
-    public TextMeshPro addText;
-    public string sceneToGo;
-    public Vector3 positionToGo;
+    [SerializeField] private TextMeshPro addText;
+    [SerializeField] private string sceneToGo;
+    [SerializeField] private Vector3 positionToGo;
     private MenuScript _myMenuScript;
     
     private void Start() {

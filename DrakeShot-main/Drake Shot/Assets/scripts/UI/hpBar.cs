@@ -19,12 +19,12 @@ public class hpBar : MonoBehaviour
         }
 
         _slider.minValue = 0;
-        _slider.maxValue = _myPlayerScript.playerMaxHp;
-        _slider.value = _myPlayerScript.playerHealth;
+        _slider.maxValue = _myPlayerScript.PlayerMaxHp;
+        _slider.value = _myPlayerScript.PlayerHealth;
     }
 
     void Update()
     {
-        _slider.value = _myPlayerScript.playerHealth;   // update every frame
+        _slider.value = _myPlayerScript.PlayerHealth;   // update every frame
     }
 }

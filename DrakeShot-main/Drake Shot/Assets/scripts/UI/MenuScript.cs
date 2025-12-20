@@ -140,12 +140,12 @@ public class MenuScript : MonoBehaviour {
         
         PlayerScript myPlayerScript = _myPlayer.GetComponent<PlayerScript>();
         
-        characterMenuLeftText.text = "Health: " + myPlayerScript.playerHealth + " / " + "100" + "\n";
-        characterMenuLeftText.text += "Armor: " + myPlayerScript.playerArmorLevel + "\n";
-        characterMenuLeftText.text += "Gold: " + myPlayerScript.playerGold + "\n";
-        characterMenuLeftText.text += "XP: " + myPlayerScript.playerXp;
-        characterMenuRightText.text = "Attack: " + myPlayerScript.playerDamage + "\n";
-        characterMenuRightText.text += "Speed: " + myPlayerScript.playerSpeed;
+        characterMenuLeftText.text = "Health: " + myPlayerScript.PlayerHealth + " / " + "100" + "\n";
+        characterMenuLeftText.text += "Armor: " + myPlayerScript.PlayerArmorLevel + "\n";
+        characterMenuLeftText.text += "Gold: " + myPlayerScript.PlayerGold + "\n";
+        characterMenuLeftText.text += "XP: " + myPlayerScript.PlayerXp;
+        characterMenuRightText.text = "Attack: " + myPlayerScript.PlayerDamage + "\n";
+        characterMenuRightText.text += "Speed: " + myPlayerScript.PlayerSpeed;
 
     }
     

@@ -39,10 +39,10 @@ public class bullet : MonoBehaviour
 
             if (myPlayerScript != null)
             {
-                myPlayerScript.playerHealth -= damage;
-                Debug.Log("Bullet hit player. HP now: " + myPlayerScript.playerHealth);
+                myPlayerScript.PlayerHealth -= damage;
+                Debug.Log("Bullet hit player. HP now: " + myPlayerScript.PlayerHealth);
 
-                if (myPlayerScript.playerHealth <= 0)
+                if (myPlayerScript.PlayerHealth <= 0)
                 {
                     Debug.Log("Player died!");
                     Destroy(col.gameObject);

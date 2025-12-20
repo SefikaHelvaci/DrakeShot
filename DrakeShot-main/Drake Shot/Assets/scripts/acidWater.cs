@@ -37,10 +37,10 @@ public class acidWater : MonoBehaviour
 
     IEnumerator waterDamage(PlayerScript myPlayerScript)
     {
-        myPlayerScript.playerHealth -= damage;
-        Debug.Log("Player got soaked by water. HP now: " + myPlayerScript.playerHealth);
+        myPlayerScript.PlayerHealth -= damage;
+        Debug.Log("Player got soaked by water. HP now: " + myPlayerScript.PlayerHealth);
         
-        if(myPlayerScript.playerHealth <= 0){
+        if(myPlayerScript.PlayerHealth <= 0){
             Debug.Log("Player drowned :(");
             Destroy(myPlayerScript.gameObject);
             yield break;
