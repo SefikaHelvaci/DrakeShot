@@ -714,6 +714,11 @@ PrefabInstance:
       propertyPath: myPlayerScript
       value: 
       objectReference: {fileID: 467949882}
+    - target: {fileID: 6505572330638386762, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: myGainSkillScript
+      value: 
+      objectReference: {fileID: 467949883}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -897,6 +902,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8237b81475334b49acc7f195a909a12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &467949883 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3239927171229365057, guid: 43a7b7183967fa444bf0aa2f659bce94,
+    type: 3}
+  m_PrefabInstance: {fileID: 1877296019}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467949880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ba7341144a48fd419734bbfc45587a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &482986708

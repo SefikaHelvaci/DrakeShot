@@ -7,7 +7,7 @@ public class SpeedSkillsMenuScript : MonoBehaviour {
     [SerializeField] private Button walkSpeedSkillButton;
     [SerializeField] private TextMeshProUGUI walkSpeedSkillAddText;
     [SerializeField] private int walkSpeedSkillCost;
-    [SerializeField] private float walkSpeedSkillEffectValue;
+    [SerializeField] private int walkSpeedSkillEffectValue;
     [SerializeField] private Button dodgeSkillButton;
     [SerializeField] private TextMeshProUGUI dodgeSkillAddText;
     [SerializeField] private int dodgeSkillCost;

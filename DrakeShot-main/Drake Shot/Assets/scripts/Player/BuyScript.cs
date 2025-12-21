@@ -34,6 +34,11 @@ public class BuyScript : MonoBehaviour {
                     _myPlayerScript.PlayerDamage = effectValue;
                     
                     break;
+                
+                case "Armor":
+                    _myPlayerScript.PlayerArmor = effectValue;
+                    
+                    break;
             }
                     
         }

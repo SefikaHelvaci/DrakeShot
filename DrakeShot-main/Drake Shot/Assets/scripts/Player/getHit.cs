@@ -41,13 +41,10 @@ public class getHit : MonoBehaviour
 
     private void hurt(int dmg)
     {
-        _myPlayerScript.PlayerHealth -= dmg;
+        _myPlayerScript.PlayerHealth -= dmg * ((100 - _myPlayerScript.PlayerArmor) / 100f);
+        
         Debug.Log($"You crashed into a monster! -1 HP. Curr HP: {_myPlayerScript.PlayerHealth}");
-
-        if (_myPlayerScript.PlayerHealth <= 0)
-        {
-            _myPlayerScript.PlayerHealth = 0;
-        }
+        
         if (_myPlayerScript.PlayerHealth == 0)
         {
             Debug.Log($"YOU DIED");

@@ -10,7 +10,7 @@ public class GainSkillScript : MonoBehaviour {
         
     }
     
-    public bool TryAndApplySkillEffect(int cost, string skillType, float effectValue) {
+    public bool TryAndApplySkillEffect(int cost, string skillType, int effectValue) {
 
         if (_myPlayerScript.PlayerXp >= cost) {
             _myPlayerScript.PlayerXp -= cost;

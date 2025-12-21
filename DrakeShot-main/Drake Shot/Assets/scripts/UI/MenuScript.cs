@@ -144,7 +144,7 @@ public class MenuScript : MonoBehaviour {
     private void UpdateCharacterMenuTexts() {
         
         characterMenuLeftText.text = "Health: " + myPlayerScript.PlayerHealth + " / " + myPlayerScript.PlayerMaxHp + "\n";
-        characterMenuLeftText.text += "Armor Level: " + myPlayerScript.PlayerArmorLevel + "\n";
+        characterMenuLeftText.text += "Armor: " + myPlayerScript.PlayerArmor + "\n";
         characterMenuLeftText.text += "Gold: " + myPlayerScript.PlayerGold + "\n";
         characterMenuLeftText.text += "XP: " + myPlayerScript.PlayerXp;
         

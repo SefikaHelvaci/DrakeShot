@@ -2,30 +2,35 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
     
-    [SerializeField] private int playerHealth = 100;
-    [SerializeField] private int playerMaxHp = 100;
+    [SerializeField] private float playerHealth = 100;
+    [SerializeField] private float playerMaxHp = 100;
     [SerializeField] private int playerDamage = 1;
-    [SerializeField] private int playerArmorLevel = 0;
+    [SerializeField] private int playerArmor = 0;
     [SerializeField] private int playerGold = 0;
     [SerializeField] private int playerXp = 0;
-    [SerializeField] private float playerSpeed = 5.0f;
+    [SerializeField] private int playerSpeed = 5;
     [SerializeField] private float playerFireRate = 0.2f;
-    [SerializeField] private float playerBulletSpeed = 7.0f;
+    [SerializeField] private int playerBulletSpeed = 7;
 
-    public int PlayerHealth {
+    public float PlayerHealth {
         
         get => playerHealth;
-        set => playerHealth = Mathf.Clamp(value, 0, playerMaxHp);
+        set => playerHealth = Mathf.Clamp(value, 0f, playerMaxHp);
         
     }
-    public int PlayerMaxHp => playerMaxHp;
+    public float PlayerMaxHp => playerMaxHp;
     public int PlayerDamage {
         
         get => playerDamage;
         set => playerDamage = value;
         
     }
-    public int PlayerArmorLevel => playerArmorLevel;
+    public int PlayerArmor {
+        
+        get => playerArmor;
+        set => playerArmor = value;
+        
+    }
     public int PlayerGold {
         
         get => playerGold;
@@ -38,13 +43,13 @@ public class PlayerScript : MonoBehaviour {
         set => playerXp = value;
         
     }
-    public float PlayerSpeed {
+    public int PlayerSpeed {
         
         get => playerSpeed;
         set => playerSpeed = value;
         
     }
-    public float PlayerBulletSpeed => playerBulletSpeed;
+    public int PlayerBulletSpeed => playerBulletSpeed;
     public float PlayerFireRate => playerFireRate;
 
     private void Awake() {

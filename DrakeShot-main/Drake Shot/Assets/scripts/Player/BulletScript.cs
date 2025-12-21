@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour {
         
     }
     
-    public void Setup(float speed, int damage) {
+    public void Setup(int speed, int damage) {
 
         _rb.linearVelocity = transform.right * speed;
         
