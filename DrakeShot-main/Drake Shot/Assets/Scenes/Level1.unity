@@ -684,6 +684,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4236446413297731362, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: myPlayerScript
+      value: 
+      objectReference: {fileID: 467949882}
+    - target: {fileID: 5803034929279628226, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: _myPlayer
+      value: 
+      objectReference: {fileID: 467949880}
+    - target: {fileID: 5803034929279628226, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: myPlayerScript
+      value: 
+      objectReference: {fileID: 467949882}
     - target: {fileID: 6071837940200454710, guid: 32a9fcbbda343774492ae29e03712456,
         type: 3}
       propertyPath: m_Name
@@ -694,6 +709,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6505572330638386762, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: myPlayerScript
+      value: 
+      objectReference: {fileID: 467949882}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -861,6 +881,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13b8077a247bce44fa238265c45daa56, type: 3}
+--- !u!1 &467949880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4611035235829081366, guid: 43a7b7183967fa444bf0aa2f659bce94,
+    type: 3}
+  m_PrefabInstance: {fileID: 1877296019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &467949882 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5343860226427839191, guid: 43a7b7183967fa444bf0aa2f659bce94,
+    type: 3}
+  m_PrefabInstance: {fileID: 1877296019}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467949880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8237b81475334b49acc7f195a909a12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &482986708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12152,7 +12190,7 @@ PrefabInstance:
     - target: {fileID: 4611035235829081366, guid: 43a7b7183967fa444bf0aa2f659bce94,
         type: 3}
       propertyPath: m_Name
-      value: playerPlaceHolder (1)
+      value: playerPlaceHolder
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

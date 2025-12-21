@@ -6,11 +6,8 @@ public class ShopItemScript : MonoBehaviour {
     [SerializeField] private TextMeshPro addText;
     [SerializeField] private int price;
     [SerializeField] private int effectValue;
-    private MenuScript _myMenuScript;
 
-    private void Start() {
-        
-        _myMenuScript = GameObject.FindWithTag("Canvas").GetComponent<MenuScript>();
+    private void Awake() {
         
         addText.text = addText.text + "Cost: " + price + "\nValue: " + effectValue;
         addText.gameObject.SetActive(false);
@@ -19,7 +16,7 @@ public class ShopItemScript : MonoBehaviour {
     
     private void OnTriggerStay2D(Collider2D other) {
         
-        if (other.CompareTag("Player") && Input.GetKeyDown(_myMenuScript.InteractionKey)) {
+        if (other.CompareTag("Player") && Input.GetKeyDown(MenuScript.Instance.InteractionKey)) {
             AttemptPurchase();
         }
 

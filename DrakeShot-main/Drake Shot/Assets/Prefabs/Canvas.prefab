@@ -3231,6 +3231,7 @@ MonoBehaviour:
   characterMenuKeyRebindButtonText: {fileID: 6255027602365376770}
   characterMenuLeftText: {fileID: 6918694441479675196}
   characterMenuRightText: {fileID: 8124068143159321347}
+  _myPlayer: {fileID: 0}
 --- !u!1 &6414620118927027078
 GameObject:
   m_ObjectHideFlags: 0

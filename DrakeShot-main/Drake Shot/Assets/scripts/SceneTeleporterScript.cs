@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,20 +8,16 @@ public class SceneTeleporterScript : MonoBehaviour {
     [SerializeField] private TextMeshPro addText;
     [SerializeField] private string sceneToGo;
     [SerializeField] private Vector3 positionToGo;
-    private MenuScript _myMenuScript;
-    
-    private void Start() {
 
-        _myMenuScript = GameObject.FindWithTag("Canvas").GetComponent<MenuScript>();
+    private void Awake() {
         
-        addText.text = _myMenuScript.InteractionKey.ToString();
-        addText.gameObject.gameObject.SetActive(false);
+        addText.gameObject.SetActive(false);
         
     }
     
     private void OnTriggerStay2D(Collider2D other) {
         
-        if (other.CompareTag("Player") && Input.GetKeyDown(_myMenuScript.InteractionKey)) {
+        if (other.CompareTag("Player") && Input.GetKeyDown(MenuScript.Instance.InteractionKey)) {
             SceneManager.LoadScene(sceneToGo);
             
             other.transform.position = positionToGo;
@@ -31,6 +28,8 @@ public class SceneTeleporterScript : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
         
         if (other.CompareTag("Player")) {
+            addText.text = MenuScript.Instance.InteractionKey.ToString();
+            
             addText.gameObject.SetActive(true);
         }
         

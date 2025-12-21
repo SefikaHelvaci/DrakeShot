@@ -180,7 +180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbdccf0503c322d4b8c1647dbbbd9e5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPlayer: {fileID: 5343860226427839191}
   canMoveDiagonally: 1
 --- !u!114 &2034875694665577471
 MonoBehaviour:
@@ -194,8 +193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0deeedf6a27c134aab7d617be39ab6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 100
-  HP: 10
   monsterDMG: 1
 --- !u!114 &5343860226427839191
 MonoBehaviour:
@@ -210,11 +207,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: 100
-  playerDamage: 0
-  playerArmor: 0
+  playerMaxHp: 100
+  playerDamage: 1
+  playerArmorLevel: 0
   playerGold: 0
   playerXp: 0
   playerSpeed: 5
+  playerBulletSpeed: 7
 --- !u!114 &9133917168251454542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,6 +229,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5017517944716158299, guid: 98a1bbf664497244c80f0fb58b242390,
     type: 3}
   weaponTransform: {fileID: 3722322210567561307}
+  fireRate: 0.2
 --- !u!1 &9069284595547968153
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,8 @@ public class PlayerScript : MonoBehaviour {
     [SerializeField] private int playerGold = 0;
     [SerializeField] private int playerXp = 0;
     [SerializeField] private float playerSpeed = 5.0f;
+    [SerializeField] private float playerFireRate = 0.2f;
+    [SerializeField] private float playerBulletSpeed = 7.0f;
 
     public int PlayerHealth {
         
@@ -22,6 +24,8 @@ public class PlayerScript : MonoBehaviour {
     public int PlayerGold => playerGold;
     public int PlayerXp => playerXp;
     public float PlayerSpeed => playerSpeed;
+    public float PlayerBulletSpeed => playerBulletSpeed;
+    public float PlayerFireRate => playerFireRate;
 
     private void Awake() {
         

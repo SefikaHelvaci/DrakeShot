@@ -1,31 +1,42 @@
 using System;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour {
     
+    public static MenuScript Instance { get; private set; }
+    
     [SerializeField] private GameObject escMenu;
     [SerializeField] private GameObject skillsMenu;
     [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameObject characterMenu;
-    private GameObject _openedMenu;
     [SerializeField] private TextMeshProUGUI skillsMenuKeyRebindButtonText;
     [SerializeField] private TextMeshProUGUI interactionKeyRebindButtonText;
     [SerializeField] private TextMeshProUGUI characterMenuKeyRebindButtonText;
     [SerializeField] private TextMeshProUGUI characterMenuLeftText;
     [SerializeField] private TextMeshProUGUI characterMenuRightText;
+    [SerializeField] private PlayerScript myPlayerScript;
+    
+    private GameObject _openedMenu;
     private KeyCode _skillMenuKey = KeyCode.K;
     private KeyCode _characterMenuKey = KeyCode.C;
     private KeyCode _interactionKey = KeyCode.E;
     private string _rebindButton = "none";
-    private GameObject _myPlayer;
     
     public KeyCode InteractionKey => _interactionKey;
 
     private void Awake() {
         
         DontDestroyOnLoad(gameObject);
+        
+        if (Instance == null) {
+            Instance = this;
+        }
+        else {
+            Destroy(gameObject);
+        }
         
         _skillMenuKey = (KeyCode)PlayerPrefs.GetInt("SkillMenuKey", (int)_skillMenuKey);
         _characterMenuKey = (KeyCode)PlayerPrefs.GetInt("CharacterMenuKey", (int)_characterMenuKey);
@@ -34,8 +45,6 @@ public class MenuScript : MonoBehaviour {
     }
     
     private void Start() {
-        
-        _myPlayer = GameObject.FindGameObjectWithTag("Player");
         
         skillsMenuKeyRebindButtonText.text = "Skills Menu Key: " + _skillMenuKey;
         interactionKeyRebindButtonText.text = "Interaction Key: " + _interactionKey;
@@ -138,13 +147,13 @@ public class MenuScript : MonoBehaviour {
     
     private void UpdateCharacterMenuTexts() {
         
-        PlayerScript myPlayerScript = _myPlayer.GetComponent<PlayerScript>();
-        
-        characterMenuLeftText.text = "Health: " + myPlayerScript.PlayerHealth + " / " + "100" + "\n";
-        characterMenuLeftText.text += "Armor: " + myPlayerScript.PlayerArmorLevel + "\n";
+        characterMenuLeftText.text = "Health: " + myPlayerScript.PlayerHealth + " / " + myPlayerScript.PlayerMaxHp + "\n";
+        characterMenuLeftText.text += "Armor Level: " + myPlayerScript.PlayerArmorLevel + "\n";
         characterMenuLeftText.text += "Gold: " + myPlayerScript.PlayerGold + "\n";
         characterMenuLeftText.text += "XP: " + myPlayerScript.PlayerXp;
-        characterMenuRightText.text = "Attack: " + myPlayerScript.PlayerDamage + "\n";
+        
+        characterMenuRightText.text = "Fire Rate: " + myPlayerScript.PlayerFireRate + "\n";
+        characterMenuRightText.text += "Attack: " + myPlayerScript.PlayerDamage + "\n";
         characterMenuRightText.text += "Speed: " + myPlayerScript.PlayerSpeed;
 
     }
@@ -163,8 +172,8 @@ public class MenuScript : MonoBehaviour {
         
         Destroy(transform.root.gameObject);
         
-        if (_myPlayer != null) {
-            Destroy(_myPlayer);
+        if (myPlayerScript != null) {
+            Destroy(myPlayerScript.gameObject);
         }
         
         SceneManager.LoadScene("Main Menu");
