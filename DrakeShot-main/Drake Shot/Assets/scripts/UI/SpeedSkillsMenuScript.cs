@@ -12,7 +12,7 @@ public class SpeedSkillsMenuScript : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI dodgeSkillAddText;
     [SerializeField] private int dodgeSkillCost;
     [SerializeField] private float dodgeSkillEffectValue;
-    [SerializeField] private PlayerScript myPlayerScript;
+    [SerializeField] private GainSkillScript myGainSkillScript;
 
     private void Start() {
         
@@ -25,7 +25,7 @@ public class SpeedSkillsMenuScript : MonoBehaviour {
     
     public void UnlockWalkSpeedSkill() {
         
-        if (myPlayerScript != null && myPlayerScript.TryAndApplySkillEffect(walkSpeedSkillCost, "Speed", walkSpeedSkillEffectValue)) {
+        if (myGainSkillScript != null && myGainSkillScript.TryAndApplySkillEffect(walkSpeedSkillCost, "Speed", walkSpeedSkillEffectValue)) {
             walkSpeedSkillButton.interactable = false;
 
             dodgeSkillButton.interactable = true;

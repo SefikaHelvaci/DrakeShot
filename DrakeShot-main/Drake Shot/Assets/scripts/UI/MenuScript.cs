@@ -42,14 +42,10 @@ public class MenuScript : MonoBehaviour {
         _characterMenuKey = (KeyCode)PlayerPrefs.GetInt("CharacterMenuKey", (int)_characterMenuKey);
         _interactionKey = (KeyCode)PlayerPrefs.GetInt("InteractionKey", (int)_interactionKey);
         
-    }
-    
-    private void Start() {
-        
         skillsMenuKeyRebindButtonText.text = "Skills Menu Key: " + _skillMenuKey;
         interactionKeyRebindButtonText.text = "Interaction Key: " + _interactionKey;
         characterMenuKeyRebindButtonText.text = "Character Menu Key: " + _characterMenuKey;
-
+        
     }
 
     private void Update() {
