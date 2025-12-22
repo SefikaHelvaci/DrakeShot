@@ -2219,6 +2219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc950ae73ca9214f9e79293689b0091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myPlayerScript: {fileID: 0}
 --- !u!1 &4753894640623005275
 GameObject:
   m_ObjectHideFlags: 0
@@ -3231,7 +3232,7 @@ MonoBehaviour:
   characterMenuKeyRebindButtonText: {fileID: 6255027602365376770}
   characterMenuLeftText: {fileID: 6918694441479675196}
   characterMenuRightText: {fileID: 8124068143159321347}
-  _myPlayer: {fileID: 0}
+  myPlayerScript: {fileID: 0}
 --- !u!1 &6414620118927027078
 GameObject:
   m_ObjectHideFlags: 0
@@ -3935,6 +3936,7 @@ MonoBehaviour:
   dodgeSkillAddText: {fileID: 1154737144568028771}
   dodgeSkillCost: 0
   dodgeSkillEffectValue: 5
+  myGainSkillScript: {fileID: 0}
 --- !u!1 &7464516948106762158
 GameObject:
   m_ObjectHideFlags: 0
@@ -4168,7 +4170,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8477760538520597651}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6505572330638386762}
+        m_TargetAssemblyTypeName: SpeedSkillsMenuScript, Assembly-CSharp
+        m_MethodName: UnlockDodgeSpeedSkill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8256349663868099862
 GameObject:
   m_ObjectHideFlags: 0

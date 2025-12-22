@@ -41,7 +41,9 @@ public class getHit : MonoBehaviour
 
     private void hurt(int dmg)
     {
-        _myPlayerScript.PlayerHealth -= dmg * ((100 - _myPlayerScript.PlayerArmor) / 100f);
+        if (Random.Range(Mathf.Epsilon, 100f) > _myPlayerScript.PlayerDodge) {
+            _myPlayerScript.PlayerHealth -= dmg * ((100 - _myPlayerScript.PlayerArmor) / 100f);
+        }
         
         Debug.Log($"You crashed into a monster! -1 HP. Curr HP: {_myPlayerScript.PlayerHealth}");
         

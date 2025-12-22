@@ -29,6 +29,11 @@ public class GainSkillScript : MonoBehaviour {
                     _myPlayerScript.PlayerSpeed += effectValue;
                     
                     break;
+                
+                case "Dodge":
+                    _myPlayerScript.PlayerDodge += effectValue;
+
+                    break;
             }
                     
         }

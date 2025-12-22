@@ -719,6 +719,11 @@ PrefabInstance:
       propertyPath: myGainSkillScript
       value: 
       objectReference: {fileID: 467949883}
+    - target: {fileID: 7438479351182585320, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

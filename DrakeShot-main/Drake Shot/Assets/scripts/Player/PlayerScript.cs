@@ -11,6 +11,7 @@ public class PlayerScript : MonoBehaviour {
     [SerializeField] private int playerSpeed = 5;
     [SerializeField] private float playerFireRate = 0.2f;
     [SerializeField] private int playerBulletSpeed = 7;
+    [SerializeField] private int playerDodge = 0;
 
     public float PlayerHealth {
         
@@ -51,6 +52,12 @@ public class PlayerScript : MonoBehaviour {
     }
     public int PlayerBulletSpeed => playerBulletSpeed;
     public float PlayerFireRate => playerFireRate;
+    public int PlayerDodge {
+        
+        get => playerDodge;
+        set => playerDodge = Mathf.Clamp(value, 0, 100);
+        
+    }
 
     private void Awake() {
         
