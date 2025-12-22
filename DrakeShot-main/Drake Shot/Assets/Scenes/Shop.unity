@@ -1270,6 +1270,11 @@ PrefabInstance:
       propertyPath: effectValue
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5186169417503452468, guid: 3021f7ddf6b41f74d9f31de6ac0a4e78,
+        type: 3}
+      propertyPath: isRepurchasable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6760779863980826466, guid: 3021f7ddf6b41f74d9f31de6ac0a4e78,
         type: 3}
       propertyPath: m_Name

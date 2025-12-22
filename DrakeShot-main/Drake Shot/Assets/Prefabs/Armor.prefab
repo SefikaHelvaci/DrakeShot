@@ -121,7 +121,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -155,6 +155,7 @@ MonoBehaviour:
   addText: {fileID: 3748402688718661988}
   price: 1
   effectValue: 10
+  isRepurchasable: 0
 --- !u!1 &5312209009004142535
 GameObject:
   m_ObjectHideFlags: 0

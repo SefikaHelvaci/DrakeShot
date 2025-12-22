@@ -6,6 +6,10 @@ public class ShopItemScript : MonoBehaviour {
     [SerializeField] private TextMeshPro addText;
     [SerializeField] private int price;
     [SerializeField] private int effectValue;
+    [SerializeField] private bool isRepurchasable;
+
+    private BuyScript _myBuyScript;
+    private bool _isPlayerInZone;
 
     private void Awake() {
         
@@ -14,17 +18,17 @@ public class ShopItemScript : MonoBehaviour {
         
     }
     
-    private void OnTriggerStay2D(Collider2D other) {
+    private void Update() {
         
-        if (other.CompareTag("Player") && Input.GetKeyDown(MenuScript.Instance.InteractionKey)) {
+        if (_isPlayerInZone && Input.GetKeyDown(MenuScript.Instance.InteractionKey)) {
             AttemptPurchase();
         }
-
+        
         return;
 
         void AttemptPurchase() {
             
-            if (other.GetComponent<BuyScript>().TryAndBuyItem(price, tag, effectValue)) {
+            if (_myBuyScript.TryAndBuyItem(price, tag, effectValue) && !isRepurchasable) {
                 Destroy(gameObject);
             }
             
@@ -36,6 +40,10 @@ public class ShopItemScript : MonoBehaviour {
         
         if (other.CompareTag("Player")) {
             addText.gameObject.SetActive(true);
+            
+            _isPlayerInZone = true;
+            
+            _myBuyScript = other.GetComponent<BuyScript>();
         }
         
     }
@@ -44,6 +52,10 @@ public class ShopItemScript : MonoBehaviour {
         
         if (other.CompareTag("Player")) {
             addText.gameObject.SetActive(false);
+            
+            _isPlayerInZone = false;
+
+            _myBuyScript = null;
         }
         
     }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5186169417503452468}
   m_Layer: 0
   m_Name: Heart
-  m_TagString: Untagged
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,9 +151,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7133c01f6db52e646a2664c8873a5733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  addText: {fileID: 9029670937170619219}
   price: 1
   effectValue: 1
-  addText: {fileID: 9029670937170619219}
+  isRepurchasable: 0
 --- !u!1 &7161577281244650173
 GameObject:
   m_ObjectHideFlags: 0

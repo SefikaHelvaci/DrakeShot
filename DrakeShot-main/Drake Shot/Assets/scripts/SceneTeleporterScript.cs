@@ -9,28 +9,34 @@ public class SceneTeleporterScript : MonoBehaviour {
     [SerializeField] private string sceneToGo;
     [SerializeField] private Vector3 positionToGo;
 
+    private Collider2D _myOther;
+    private bool _isPlayerInZone;
+
     private void Awake() {
         
         addText.gameObject.SetActive(false);
         
     }
-    
-    private void OnTriggerStay2D(Collider2D other) {
+
+    private void Update() {
         
-        if (other.CompareTag("Player") && Input.GetKeyDown(MenuScript.Instance.InteractionKey)) {
+        if (_isPlayerInZone && Input.GetKeyDown(MenuScript.Instance.InteractionKey)) {
             SceneManager.LoadScene(sceneToGo);
             
-            other.transform.position = positionToGo;
+            _myOther.transform.position = positionToGo;
         }
-
+        
     }
     
     private void OnTriggerEnter2D(Collider2D other) {
         
         if (other.CompareTag("Player")) {
             addText.text = MenuScript.Instance.InteractionKey.ToString();
-            
             addText.gameObject.SetActive(true);
+            
+            _isPlayerInZone = true;
+
+            _myOther = other;
         }
         
     }
@@ -39,6 +45,10 @@ public class SceneTeleporterScript : MonoBehaviour {
         
         if (other.CompareTag("Player")) {
             addText.gameObject.SetActive(false);
+            
+            _isPlayerInZone = false;
+
+            _myOther = null;
         }
         
     }
