@@ -50,8 +50,18 @@ public class PlayerScript : MonoBehaviour {
         set => playerSpeed = value;
         
     }
-    public int PlayerBulletSpeed => playerBulletSpeed;
-    public float PlayerFireRate => playerFireRate;
+    public float PlayerFireRate {
+        
+        get => playerFireRate;
+        set => playerFireRate = value;
+
+    }
+    public int PlayerBulletSpeed {
+        
+        get => playerBulletSpeed;
+        set => playerBulletSpeed = value;
+        
+    }
     public int PlayerDodge {
         
         get => playerDodge;

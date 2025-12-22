@@ -12,31 +12,58 @@ public class GainSkillScript : MonoBehaviour {
     
     public bool TryAndApplySkillEffect(int cost, string skillType, int effectValue) {
 
-        if (_myPlayerScript.PlayerXp >= cost) {
-            _myPlayerScript.PlayerXp -= cost;
+        if (TrySpendXp(cost)) {
             
-            ApplyEffect();
+            switch (skillType) {
+                case "Speed":
+                    _myPlayerScript.PlayerSpeed += effectValue;
+
+                    break;
+
+                case "Dodge":
+                    _myPlayerScript.PlayerDodge += effectValue;
+
+                    break;
+                
+                case "Bullet Speed":
+                    _myPlayerScript.PlayerBulletSpeed += effectValue;
+
+                    break;
+            }
             
             return true;
         }
 
         return false;
+        
+    }
+    public bool TryAndApplySkillEffect(int cost, string skillType, float effectValue) {
 
-        void ApplyEffect() {
-
+        if (TrySpendXp(cost)) {
+            
             switch (skillType) {
-                case "Speed":
-                    _myPlayerScript.PlayerSpeed += effectValue;
-                    
-                    break;
-                
-                case "Dodge":
-                    _myPlayerScript.PlayerDodge += effectValue;
+                case "Fire Rate":
+                    _myPlayerScript.PlayerFireRate -= effectValue;
 
                     break;
             }
-                    
+            
+            return true;
         }
+
+        return false;
+        
+    }
+    
+    private bool TrySpendXp(int cost) {
+        
+        if (_myPlayerScript.PlayerXp >= cost) {
+            _myPlayerScript.PlayerXp -= cost;
+            
+            return true; 
+        }
+        
+        return false;
         
     }
     
