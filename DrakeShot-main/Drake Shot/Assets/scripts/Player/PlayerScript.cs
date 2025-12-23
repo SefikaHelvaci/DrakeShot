@@ -15,6 +15,8 @@ public class PlayerScript : MonoBehaviour {
     [SerializeField] public int freeze4Heal = 10;
     [SerializeField] public int hpPerHeal = 5;
 
+    public static PlayerScript Instance;
+    
     private int frozenBeasts = 0;
 
     public void beastFrozen()
@@ -89,8 +91,15 @@ public class PlayerScript : MonoBehaviour {
     }
 
     private void Awake() {
-        
+
         DontDestroyOnLoad(gameObject);
+
+        if (Instance == null) {
+            Instance = this;
+        }
+        else {
+            Destroy(gameObject);
+        }
         
     }
     

@@ -1,6 +1,5 @@
 using System;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -29,13 +28,8 @@ public class MenuScript : MonoBehaviour {
 
     private void Awake() {
         
-        DontDestroyOnLoad(gameObject);
-        
         if (Instance == null) {
             Instance = this;
-        }
-        else {
-            Destroy(gameObject);
         }
         
         _skillMenuKey = (KeyCode)PlayerPrefs.GetInt("SkillMenuKey", (int)_skillMenuKey);
