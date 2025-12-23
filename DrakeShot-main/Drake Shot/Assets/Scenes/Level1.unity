@@ -487,6 +487,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: bulletMonsterPH
       objectReference: {fileID: 0}
+    - target: {fileID: 6132819243387486896, guid: d24a4ea6b7d67724b889dfbd2a1c3bc8,
+        type: 3}
+      propertyPath: chaser
+      value: 
+      objectReference: {fileID: 1696833300}
+    - target: {fileID: 6132819243387486896, guid: d24a4ea6b7d67724b889dfbd2a1c3bc8,
+        type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 467949882}
+    - target: {fileID: 6132819243387486896, guid: d24a4ea6b7d67724b889dfbd2a1c3bc8,
+        type: 3}
+      propertyPath: freezeSplashRadius
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -684,6 +699,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3227303752884050949, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3227303752884050949, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3227303752884050949, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4236446413297731362, guid: 32a9fcbbda343774492ae29e03712456,
         type: 3}
       propertyPath: myPlayerScript
@@ -719,11 +749,21 @@ PrefabInstance:
       propertyPath: myGainSkillScript
       value: 
       objectReference: {fileID: 467949883}
+    - target: {fileID: 6855928992030345251, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7438479351182585320, guid: 32a9fcbbda343774492ae29e03712456,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7476266144938892622, guid: 32a9fcbbda343774492ae29e03712456,
+        type: 3}
+      propertyPath: myGainSkillScript
+      value: 
+      objectReference: {fileID: 467949883}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1162,6 +1202,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8174091035723847849, guid: f7dccb7af2cd2e34292484c61437d1db,
+        type: 3}
+      propertyPath: chaser
+      value: 
+      objectReference: {fileID: 1648190002}
+    - target: {fileID: 8174091035723847849, guid: f7dccb7af2cd2e34292484c61437d1db,
+        type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 467949882}
+    - target: {fileID: 8174091035723847849, guid: f7dccb7af2cd2e34292484c61437d1db,
+        type: 3}
+      propertyPath: freezeSplashRadius
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1317,6 +1372,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8174091035723847849, guid: f7dccb7af2cd2e34292484c61437d1db,
+        type: 3}
+      propertyPath: chaser
+      value: 
+      objectReference: {fileID: 1212917775}
+    - target: {fileID: 8174091035723847849, guid: f7dccb7af2cd2e34292484c61437d1db,
+        type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 467949882}
+    - target: {fileID: 8174091035723847849, guid: f7dccb7af2cd2e34292484c61437d1db,
+        type: 3}
+      propertyPath: freezeSplashRadius
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2028,6 +2098,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 585474684}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1212917775 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6943369809581123527, guid: f7dccb7af2cd2e34292484c61437d1db,
+    type: 3}
+  m_PrefabInstance: {fileID: 585474684}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a17c515b6883e04eaebde998142378b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1220580923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2721,6 +2803,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8174091035723847849, guid: f7dccb7af2cd2e34292484c61437d1db,
+        type: 3}
+      propertyPath: chaser
+      value: 
+      objectReference: {fileID: 1583148401}
+    - target: {fileID: 8174091035723847849, guid: f7dccb7af2cd2e34292484c61437d1db,
+        type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 467949882}
+    - target: {fileID: 8174091035723847849, guid: f7dccb7af2cd2e34292484c61437d1db,
+        type: 3}
+      propertyPath: freezeSplashRadius
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2798,6 +2895,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bulletMonsterPH (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6132819243387486896, guid: d24a4ea6b7d67724b889dfbd2a1c3bc8,
+        type: 3}
+      propertyPath: chaser
+      value: 
+      objectReference: {fileID: 1682114122}
+    - target: {fileID: 6132819243387486896, guid: d24a4ea6b7d67724b889dfbd2a1c3bc8,
+        type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 467949882}
+    - target: {fileID: 6132819243387486896, guid: d24a4ea6b7d67724b889dfbd2a1c3bc8,
+        type: 3}
+      propertyPath: freezeSplashRadius
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2883,6 +2995,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bulletMonsterPH (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6132819243387486896, guid: d24a4ea6b7d67724b889dfbd2a1c3bc8,
+        type: 3}
+      propertyPath: chaser
+      value: 
+      objectReference: {fileID: 1575634292}
+    - target: {fileID: 6132819243387486896, guid: d24a4ea6b7d67724b889dfbd2a1c3bc8,
+        type: 3}
+      propertyPath: playerScript
+      value: 
+      objectReference: {fileID: 467949882}
+    - target: {fileID: 6132819243387486896, guid: d24a4ea6b7d67724b889dfbd2a1c3bc8,
+        type: 3}
+      propertyPath: freezeSplashRadius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6132819243387486896, guid: d24a4ea6b7d67724b889dfbd2a1c3bc8,
+        type: 3}
+      propertyPath: tierThree2Unlocked
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3170,12 +3302,72 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &1575634292 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 983617959185325245, guid: d24a4ea6b7d67724b889dfbd2a1c3bc8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1522273843}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a17c515b6883e04eaebde998142378b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1583148401 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6943369809581123527, guid: f7dccb7af2cd2e34292484c61437d1db,
+    type: 3}
+  m_PrefabInstance: {fileID: 1412945397}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a17c515b6883e04eaebde998142378b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1648190000 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7025649536145600445, guid: f7dccb7af2cd2e34292484c61437d1db,
     type: 3}
   m_PrefabInstance: {fileID: 545014672}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1648190002 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6943369809581123527, guid: f7dccb7af2cd2e34292484c61437d1db,
+    type: 3}
+  m_PrefabInstance: {fileID: 545014672}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a17c515b6883e04eaebde998142378b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1682114122 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 983617959185325245, guid: d24a4ea6b7d67724b889dfbd2a1c3bc8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1430626650}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a17c515b6883e04eaebde998142378b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1696833300 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 983617959185325245, guid: d24a4ea6b7d67724b889dfbd2a1c3bc8,
+    type: 3}
+  m_PrefabInstance: {fileID: 401021089}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a17c515b6883e04eaebde998142378b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1702220429
 PrefabInstance:
   m_ObjectHideFlags: 0

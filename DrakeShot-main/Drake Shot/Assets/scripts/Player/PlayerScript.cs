@@ -12,7 +12,26 @@ public class PlayerScript : MonoBehaviour {
     [SerializeField] private float playerFireRate = 0.2f;
     [SerializeField] private int playerBulletSpeed = 7;
     [SerializeField] private int playerDodge = 0;
+    [SerializeField] public int freeze4Heal = 10;
+    [SerializeField] public int hpPerHeal = 5;
 
+    private int frozenBeasts = 0;
+
+    public void beastFrozen()
+    {
+        frozenBeasts++;
+        if (frozenBeasts >= freeze4Heal)
+        {
+            healPlayer();
+            frozenBeasts = 0;
+        }
+    }
+
+    public void healPlayer()
+    {
+        playerHealth += hpPerHeal;
+    }
+    
     public float PlayerHealth {
         
         get => playerHealth;
