@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addText: {fileID: 3748402688718661988}
-  price: 1
+  price: 3
   effectValue: 10
   isRepurchasable: 0
 --- !u!1 &5312209009004142535

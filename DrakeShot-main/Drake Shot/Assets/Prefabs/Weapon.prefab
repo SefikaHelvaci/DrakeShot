@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: -105541197
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 1616e4908b7c0284997f328329c92b1b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -127,15 +127,15 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 1.2, y: 0.8}
     newSize: {x: 1.2, y: 0.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2, y: 1.5}
+  m_Size: {x: 1.5, y: 1.2}
   m_EdgeRadius: 0
 --- !u!210 &3037273343738545873
 SortingGroup:
@@ -161,9 +161,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7133c01f6db52e646a2664c8873a5733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  addText: {fileID: 813983870947796838}
   price: 1
   effectValue: 1
-  addText: {fileID: 813983870947796838}
+  isRepurchasable: 0
 --- !u!1 &2792991276670430233
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,14 +13,13 @@ public class WeaponScript : MonoBehaviour {
     private void Awake() {
         
         _myPlayerScript = GetComponent<PlayerScript>();
-        _mainCamera = Camera.main;
         
     }
 
     private void Update() {
 
         if (Time.timeScale != 0f) {
-            Vector3 mousePos = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePos.z = 0f; 
         
             _aimDirection = (mousePos - transform.position).normalized;

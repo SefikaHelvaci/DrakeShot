@@ -2305,8 +2305,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5186169417503452468, guid: 3021f7ddf6b41f74d9f31de6ac0a4e78,
         type: 3}
-      propertyPath: effectValue
-      value: 10
+      propertyPath: isRepurchasable
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6760779863980826466, guid: 3021f7ddf6b41f74d9f31de6ac0a4e78,
         type: 3}
@@ -12224,21 +12224,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241648075574320432, guid: 70530be0c365bb646a5f4bf3862bda1f,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241648075574320432, guid: 70530be0c365bb646a5f4bf3862bda1f,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8241648075574320432, guid: 70530be0c365bb646a5f4bf3862bda1f,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -105541197
       objectReference: {fileID: 0}
     - target: {fileID: 9175947482702054522, guid: 70530be0c365bb646a5f4bf3862bda1f,
         type: 3}

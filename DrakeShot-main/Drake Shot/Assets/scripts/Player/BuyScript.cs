@@ -10,7 +10,7 @@ public class BuyScript : MonoBehaviour {
         
     }
     
-    public bool TryAndBuyItem(int price, string itemType, int effectValue) {
+    public bool TryAndBuyItem(int price, string itemType, float effectValue) {
 
         if (_myPlayerScript.PlayerGold >= price) {
             _myPlayerScript.PlayerGold -= price;
@@ -31,12 +31,17 @@ public class BuyScript : MonoBehaviour {
                     break;
                 
                 case "Weapon":
-                    _myPlayerScript.PlayerDamage = effectValue;
+                    _myPlayerScript.PlayerDamage = Mathf.RoundToInt(effectValue);
                     
                     break;
                 
                 case "Armor":
-                    _myPlayerScript.PlayerArmor = effectValue;
+                    _myPlayerScript.PlayerArmor = Mathf.RoundToInt(effectValue);
+                    
+                    break;
+                
+                case "Poison":
+                    _myPlayerScript.PlayerPoisonDamage = effectValue;
                     
                     break;
             }

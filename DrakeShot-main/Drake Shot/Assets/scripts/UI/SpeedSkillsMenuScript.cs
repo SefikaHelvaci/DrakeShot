@@ -31,7 +31,7 @@ public class SpeedSkillsMenuScript : MonoBehaviour {
 
         return;
 
-        void ArrangeButton(TextMeshProUGUI addText, int cost, float  effectValue, Button button, bool isInteractable) {
+        void ArrangeButton(TextMeshProUGUI addText, int cost, float effectValue, Button button, bool isInteractable) {
             
             addText.text += "\nCost: " + cost + "\nValue: " + effectValue;
             
@@ -65,14 +65,14 @@ public class SpeedSkillsMenuScript : MonoBehaviour {
                     break;
 
                 case "Fire Rate":
-                    if (myGainSkillScript.TryAndApplySkillEffect(fireRateSkillCost, "Fire Rate", fireRateSkillEffectValue)) {
+                    if (myGainSkillScript.TryAndApplySkillEffect(fireRateSkillCost, skillType, fireRateSkillEffectValue)) {
                         CloseButton(fireRateSkillButton);
                     }
                     
                     break;
 
                 case "Bullet Speed":
-                    if (myGainSkillScript.TryAndApplySkillEffect(bulletSpeedSkillCost, "Bullet Speed", bulletSpeedSkillEffectValue)) {
+                    if (myGainSkillScript.TryAndApplySkillEffect(bulletSpeedSkillCost, skillType, bulletSpeedSkillEffectValue)) {
                         CloseButton(bulletSpeedSkillButton);
                     }
                     

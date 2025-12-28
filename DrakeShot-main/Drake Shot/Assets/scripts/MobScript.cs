@@ -1,11 +1,12 @@
+using System.Collections;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
-public class MobScript : MonoBehaviour
-{
+public class MobScript : MonoBehaviour {
 
     [SerializeField] private GameObject goldPrefab;
     [SerializeField] private GameObject xpPrefab;
-    [SerializeField] private int health = 10;
+    [SerializeField] private float health = 10;
     [SerializeField] private float cycleCoef = 1f;
 
     [SerializeField] private float freezeChance = 30f;
@@ -18,13 +19,21 @@ public class MobScript : MonoBehaviour
     [SerializeField] private PlayerScript playerScript;
     [SerializeField] public int freezeDMG = 5;
     [SerializeField] public float freezeSplashRadius = 10f;
+    private bool _isPoisoned = false;
 
+    private void Awake() {
+        
+        playerScript = FindFirstObjectByType<PlayerScript>();
+        
+    }
 
-    public void TakeDamage(int damageAmount)
-    {
-
-        playerScript = FindObjectOfType<PlayerScript>();
+    public void TakeDamage(int damageAmount) {
+        
         health -= damageAmount;
+        
+        if (playerScript.PlayerPoisonDamage != 0f && !_isPoisoned) {
+            StartCoroutine(ApplyPoisonDamage());
+        }
 
         if (tierOneUnlocked && chaser != null)
         {
@@ -43,8 +52,6 @@ public class MobScript : MonoBehaviour
             roll4freeze();
             playerScript.beastFrozen();
         }
-
-
 
         if (health <= 0)
         {
@@ -110,5 +117,23 @@ public class MobScript : MonoBehaviour
 
             }
         }
+        
+        IEnumerator ApplyPoisonDamage() {
+            _isPoisoned = true;
+            
+            for (int i = 0; i < 2; i++) {
+                yield return new WaitForSeconds(1f);
+            
+                health -= playerScript.PlayerPoisonDamage;
+                
+                if (health <= 0) {
+                    Die();
+                    yield break;
+                }
+            }
+
+            _isPoisoned = false;
+        }
+        
     }
 }

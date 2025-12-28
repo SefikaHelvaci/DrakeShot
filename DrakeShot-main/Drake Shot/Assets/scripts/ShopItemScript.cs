@@ -5,7 +5,7 @@ public class ShopItemScript : MonoBehaviour {
     
     [SerializeField] private TextMeshPro addText;
     [SerializeField] private int price;
-    [SerializeField] private int effectValue;
+    [SerializeField] private float effectValue;
     [SerializeField] private bool isRepurchasable;
 
     private BuyScript _myBuyScript;

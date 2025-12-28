@@ -153,8 +153,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addText: {fileID: 9029670937170619219}
   price: 1
-  effectValue: 1
-  isRepurchasable: 0
+  effectValue: 10
+  isRepurchasable: 1
 --- !u!1 &7161577281244650173
 GameObject:
   m_ObjectHideFlags: 0

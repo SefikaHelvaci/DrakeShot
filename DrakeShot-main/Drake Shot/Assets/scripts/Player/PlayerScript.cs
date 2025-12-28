@@ -14,6 +14,7 @@ public class PlayerScript : MonoBehaviour {
     [SerializeField] private int playerDodge = 0;
     [SerializeField] public int freeze4Heal = 10;
     [SerializeField] public int hpPerHeal = 5;
+    [SerializeField] private float playerPoisonDamage = 0f;
 
     public static PlayerScript Instance;
     
@@ -88,6 +89,12 @@ public class PlayerScript : MonoBehaviour {
         get => playerDodge;
         set => playerDodge = Mathf.Clamp(value, 0, 100);
         
+    }
+    public float PlayerPoisonDamage {
+        
+        get => playerPoisonDamage;
+        set => playerPoisonDamage = value;
+
     }
 
     private void Awake() {
