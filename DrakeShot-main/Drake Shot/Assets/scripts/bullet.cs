@@ -39,8 +39,13 @@ public class bullet : MonoBehaviour
 
             if (myPlayerScript != null)
             {
-                myPlayerScript.PlayerHealth -= damage;
-                Debug.Log("Bullet hit player. HP now: " + myPlayerScript.PlayerHealth);
+                if (Random.Range(Mathf.Epsilon, 100f) > myPlayerScript.PlayerDodge) {
+                    myPlayerScript.PlayerHealth -= damage * ((100 - myPlayerScript.PlayerArmor) / 100f);
+                    
+                    Debug.Log("Bullet hit player. HP now: " + myPlayerScript.PlayerHealth);
+                    
+                    Destroy(gameObject);
+                }
 
                 if (myPlayerScript.PlayerHealth <= 0)
                 {
@@ -48,8 +53,6 @@ public class bullet : MonoBehaviour
                     Destroy(col.gameObject);
                 }
             }
-
-            Destroy(gameObject);
         }
     }
 }
