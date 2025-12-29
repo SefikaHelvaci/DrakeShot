@@ -12148,7 +12148,7 @@ PrefabInstance:
     - target: {fileID: 1425195161295543068, guid: 70530be0c365bb646a5f4bf3862bda1f,
         type: 3}
       propertyPath: sceneToGo
-      value: Shop
+      value: Level2
       objectReference: {fileID: 0}
     - target: {fileID: 4079440124700167768, guid: 70530be0c365bb646a5f4bf3862bda1f,
         type: 3}
