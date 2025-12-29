@@ -138,13 +138,16 @@ public class MenuScript : MonoBehaviour {
     private void UpdateCharacterMenuTexts() {
         
         characterMenuLeftText.text = "Health: " + myPlayerScript.PlayerHealth + " / " + myPlayerScript.PlayerMaxHp + "\n";
+        characterMenuLeftText.text += "Poison Damage: " + myPlayerScript.PlayerPoisonDamage + "\n";
         characterMenuLeftText.text += "Armor: " + myPlayerScript.PlayerArmor + "\n";
-        characterMenuLeftText.text += "Gold: " + myPlayerScript.PlayerGold + "\n";
-        characterMenuLeftText.text += "XP: " + myPlayerScript.PlayerXp;
+        characterMenuLeftText.text += "Damage: " + myPlayerScript.PlayerDamage + "\n";
+        characterMenuLeftText.text += "Gold: " + myPlayerScript.PlayerGold;
         
         characterMenuRightText.text = "Fire Rate: " + myPlayerScript.PlayerFireRate + "\n";
-        characterMenuRightText.text += "Attack: " + myPlayerScript.PlayerDamage + "\n";
-        characterMenuRightText.text += "Speed: " + myPlayerScript.PlayerSpeed;
+        characterMenuRightText.text += "Bullet Speed: " + myPlayerScript.PlayerBulletSpeed + "\n";
+        characterMenuRightText.text += "Dodge: " + myPlayerScript.PlayerDodge + "\n";
+        characterMenuRightText.text += "Speed: " + myPlayerScript.PlayerSpeed + "\n";
+        characterMenuRightText.text += "XP: " + myPlayerScript.PlayerXp;
 
     }
     
