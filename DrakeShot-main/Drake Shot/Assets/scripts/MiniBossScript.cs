@@ -15,7 +15,6 @@ public class MiniBossRandomSpawner : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
         
         if (other.CompareTag("Player") && _spawnCoroutine == null) {
-            Debug.Log("entered");
             _spawnCoroutine = StartCoroutine(SpawnCoroutine());
         }
         
@@ -24,7 +23,6 @@ public class MiniBossRandomSpawner : MonoBehaviour {
     private void OnTriggerExit2D(Collider2D other) {
         
         if (other.CompareTag("Player") && _spawnCoroutine != null) {
-            Debug.Log("exited");
             StopCoroutine(_spawnCoroutine);
             
             _spawnCoroutine = null;
@@ -35,7 +33,6 @@ public class MiniBossRandomSpawner : MonoBehaviour {
     private IEnumerator SpawnCoroutine() {
         
         while (_currentSpawnWave < maxSpawnWave) {
-            Debug.Log("inside while");
             
             Spawn();
 
@@ -51,7 +48,6 @@ public class MiniBossRandomSpawner : MonoBehaviour {
             for (int i = 0; i < enemiesPerWave; i++) {
                 Instantiate(enemyPrefab, transform.position + (Vector3)(Random.insideUnitCircle * cycleCoef), 
                     Quaternion.identity);
-                Debug.Log("spawned");
             }
         
         }
