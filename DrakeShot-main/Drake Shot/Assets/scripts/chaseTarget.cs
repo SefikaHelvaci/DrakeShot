@@ -12,8 +12,9 @@ public class chaseTarget : MonoBehaviour
     //public GameObject movingObject;  
     //public GameObject targetPosition; 
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Transform target;
-    [SerializeField] private float speed = 1f; 
+    [SerializeField] private float speed = 1f;
+
+    private Transform _target;
     private bool isFrozen = false;
     private Color ogColor;
     private SpriteRenderer rend;
@@ -21,8 +22,11 @@ public class chaseTarget : MonoBehaviour
     public bool IsCurrentlyFrozen => isFrozen;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
+
+        _target = PlayerScript.Instance.transform;
+        
         if (rend == null) {
             rend = GetComponent<SpriteRenderer>();
         }
@@ -46,9 +50,9 @@ public class chaseTarget : MonoBehaviour
             //);
         //}
 
-        if (target != null && !isFrozen)
+        if (_target != null && !isFrozen)
         {
-            Vector2 nextPos = Vector2.MoveTowards(rb.position, target.position, speed * Time.deltaTime);
+            Vector2 nextPos = Vector2.MoveTowards(rb.position, _target.position, speed * Time.deltaTime);
             rb.MovePosition(nextPos);
         }
         

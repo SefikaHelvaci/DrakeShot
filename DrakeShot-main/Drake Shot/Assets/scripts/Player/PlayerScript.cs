@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
     
+    public static PlayerScript Instance { get; private set; }
+    
     [SerializeField] private float playerHealth = 100;
     [SerializeField] private float playerMaxHp = 100;
     [SerializeField] private int playerDamage = 1;
@@ -15,8 +17,6 @@ public class PlayerScript : MonoBehaviour {
     [SerializeField] public int freeze4Heal = 10;
     [SerializeField] public int hpPerHeal = 5;
     [SerializeField] private float playerPoisonDamage = 0f;
-
-    public static PlayerScript Instance;
     
     private int frozenBeasts = 0;
 

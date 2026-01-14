@@ -111,6 +111,16 @@ MonoBehaviour:
     type: 3}
   health: 10
   cycleCoef: 1
+  freezeChance: 30
+  tierOneUnlocked: 1
+  tierTwo1Unlocked: 1
+  tierTwo2Unlocked: 1
+  tierThree1Unlocked: 1
+  tierThree2Unlocked: 1
+  chaser: {fileID: 6943369809581123527}
+  playerScript: {fileID: 0}
+  freezeDMG: 5
+  freezeSplashRadius: 10
 --- !u!58 &4808570431412087738
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -187,7 +197,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7629299131750771110}
-  target: {fileID: 0}
   speed: 5
 --- !u!114 &-4270730568303669739
 MonoBehaviour:

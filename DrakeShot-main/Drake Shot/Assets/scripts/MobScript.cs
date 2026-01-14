@@ -16,22 +16,23 @@ public class MobScript : MonoBehaviour {
     [SerializeField] private bool tierThree1Unlocked = true;
     [SerializeField] private bool tierThree2Unlocked = true;
     [SerializeField] private chaseTarget chaser;
-    [SerializeField] private PlayerScript playerScript;
     [SerializeField] public int freezeDMG = 5;
     [SerializeField] public float freezeSplashRadius = 10f;
+    
+    private PlayerScript _playerScript;
     private bool _isPoisoned = false;
 
-    private void Awake() {
-        
-        playerScript = FindFirstObjectByType<PlayerScript>();
-        
+    private void Start() {
+
+        _playerScript = PlayerScript.Instance;
+
     }
 
     public void TakeDamage(int damageAmount) {
         
         health -= damageAmount;
         
-        if (playerScript.PlayerPoisonDamage != 0f && !_isPoisoned) {
+        if (_playerScript.PlayerPoisonDamage != 0f && !_isPoisoned) {
             StartCoroutine(ApplyPoisonDamage());
         }
 
@@ -47,10 +48,10 @@ public class MobScript : MonoBehaviour {
 
         }
 
-        if (tierTwo2Unlocked && chaser != null && playerScript != null)
+        if (tierTwo2Unlocked && chaser != null && _playerScript != null)
         {
             roll4freeze();
-            playerScript.beastFrozen();
+            _playerScript.beastFrozen();
         }
 
         if (health <= 0)
@@ -124,7 +125,7 @@ public class MobScript : MonoBehaviour {
             for (int i = 0; i < 2; i++) {
                 yield return new WaitForSeconds(1f);
             
-                health -= playerScript.PlayerPoisonDamage;
+                health -= _playerScript.PlayerPoisonDamage;
                 
                 if (health <= 0) {
                     Die();
