@@ -31,6 +31,9 @@ public class MenuScript : MonoBehaviour {
         if (Instance == null) {
             Instance = this;
         }
+        else {
+            Destroy(gameObject);
+        }
         
         _skillMenuKey = (KeyCode)PlayerPrefs.GetInt("SkillMenuKey", (int)_skillMenuKey);
         _characterMenuKey = (KeyCode)PlayerPrefs.GetInt("CharacterMenuKey", (int)_characterMenuKey);

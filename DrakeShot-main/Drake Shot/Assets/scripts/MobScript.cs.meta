@@ -6,8 +6,10 @@ MonoImporter:
   defaultReferences:
   - goldPrefab: {fileID: 3303621969685416096, guid: beaf10b9047c9ab459200f0498262da2,
       type: 3}
-  - XPPrefab: {fileID: 5752143571989013688, guid: 4570309abf6eb9b4a80d9dd450f8bd4b,
+  - xpPrefab: {fileID: 5752143571989013688, guid: 4570309abf6eb9b4a80d9dd450f8bd4b,
       type: 3}
+  - chaser: {instanceID: 0}
+  - playerScript: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
