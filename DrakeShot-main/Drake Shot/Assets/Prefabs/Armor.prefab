@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3941955098426378075}
   - component: {fileID: 5548893305024113226}
   - component: {fileID: 5043856144581034813}
-  - component: {fileID: 6177899991506231036}
   - component: {fileID: 3735665908686335827}
   m_Layer: 0
   m_Name: Armor
@@ -128,18 +127,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.35, y: 0.45}
   m_Direction: 0
---- !u!210 &6177899991506231036
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4072631268536396076}
-  m_Enabled: 1
-  m_SortingLayerID: -105541197
-  m_SortingLayer: 3
-  m_SortingOrder: 0
-  m_SortAtRoot: 0
 --- !u!114 &3735665908686335827
 MonoBehaviour:
   m_ObjectHideFlags: 0
