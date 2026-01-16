@@ -18,6 +18,7 @@ public class getHit : MonoBehaviour
         
     }
 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log($"{gameObject.name} (tag: {gameObject.tag}) collided with {collision.gameObject.name} (tag: {collision.gameObject.tag})");
@@ -47,9 +48,18 @@ public class getHit : MonoBehaviour
         
         Debug.Log($"You crashed into a monster! -1 HP. Curr HP: {_myPlayerScript.PlayerHealth}");
         
-        if (_myPlayerScript.PlayerHealth == 0)
+        if (_myPlayerScript.PlayerHealth <= 0)
         {
             Debug.Log($"YOU DIED");
+            if (GameOver.Instance == null)
+            {
+                Debug.LogError("GameOver.Instance is NULL");
+            }
+            else
+            {
+                GameOver.Instance.itsGameOver();
+            }
+
             Destroy(gameObject);
         }
     }

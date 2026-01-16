@@ -1,20 +1,23 @@
+
 using UnityEngine;
 
-public class GameManagerScript : MonoBehaviour {
+
+public class GameManagerScript : MonoBehaviour
+{
 
     public static GameManagerScript Instance;
-
-    private void Awake() {
-
-        DontDestroyOnLoad(gameObject);
-
-        if (Instance == null) {
+   
+    private void Awake()
+    {
+        if (Instance == null)
+        {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
-        else {
+        else
+        {
             Destroy(gameObject);
         }
-        
+
     }
-    
 }
