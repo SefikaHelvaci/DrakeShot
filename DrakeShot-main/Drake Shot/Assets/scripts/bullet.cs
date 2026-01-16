@@ -56,6 +56,15 @@ public class bullet : MonoBehaviour
                 if (myPlayerScript.PlayerHealth <= 0)
                 {
                     Debug.Log("Player died!");
+                    if (GameOver.Instance == null)
+                    {
+                        Debug.LogError("GameOver.Instance is NULL");
+                    }
+                    else
+                    {
+                        GameOver.Instance.itsGameOver();
+                    }
+                    
                     Destroy(col.gameObject);
                 }
             }
