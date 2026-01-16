@@ -149,4 +149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  shakeAmount: 0.1
+  playerSprite: {fileID: 0}
   hitSpeed: 0.5
