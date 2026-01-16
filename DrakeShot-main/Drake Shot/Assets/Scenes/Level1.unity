@@ -198,6 +198,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoundingBox
       objectReference: {fileID: 0}
+    - target: {fileID: 2864182889521235539, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -377,6 +382,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoundingBox (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864182889521235539, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -579,6 +589,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoundingBox (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864182889521235539, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1282,6 +1297,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoundingBox (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2864182889521235539, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1365,6 +1385,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoundingBox (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864182889521235539, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1528,6 +1553,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoundingBox (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 2864182889521235539, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1652,6 +1682,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoundingBox
       objectReference: {fileID: 0}
+    - target: {fileID: 2864182889521235539, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1729,6 +1764,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoundingBox (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864182889521235539, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2033,6 +2073,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoundingBox (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2864182889521235539, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2284,6 +2329,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoundingBox (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864182889521235539, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2898,6 +2948,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoundingBox (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2864182889521235539, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3179,6 +3234,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoundingBox (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2864182889521235539, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3302,6 +3362,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoundingBox (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864182889521235539, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12413,6 +12478,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoundingBox (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2864182889521235539, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12574,6 +12644,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BoundingBox (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864182889521235539, guid: cd2ccad2edbb2ee4ab5a3526502c3146,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

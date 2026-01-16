@@ -31,11 +31,17 @@ public class bullet : MonoBehaviour
         Destroy(gameObject, destructionTime);
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.CompareTag("Player"))
+        if (col.gameObject.tag == "Wall")
         {
-            PlayerScript myPlayerScript = col.GetComponent<PlayerScript>();
+            Destroy(gameObject);
+        }
+        
+        
+        if (col.gameObject.CompareTag("Player"))
+        {
+            PlayerScript myPlayerScript = col.gameObject.GetComponent<PlayerScript>();
 
             if (myPlayerScript != null)
             {
