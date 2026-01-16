@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7629299131750771110}
   - component: {fileID: 6943369809581123527}
   - component: {fileID: -4270730568303669739}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: monsterPlaceHolder
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -111,6 +111,7 @@ MonoBehaviour:
     type: 3}
   health: 10
   cycleCoef: 1
+  dropAmount: 1
   freezeChance: 30
   tierOneUnlocked: 1
   tierTwo1Unlocked: 1
@@ -118,7 +119,6 @@ MonoBehaviour:
   tierThree1Unlocked: 1
   tierThree2Unlocked: 1
   chaser: {fileID: 6943369809581123527}
-  playerScript: {fileID: 0}
   freezeDMG: 5
   freezeSplashRadius: 10
 --- !u!58 &4808570431412087738

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2571133843419191644}
   - component: {fileID: 4007151700720468818}
   - component: {fileID: -7497836851233543349}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bulletMonsterPH
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -126,6 +126,7 @@ MonoBehaviour:
     type: 3}
   health: 10
   cycleCoef: 1
+  dropAmount: 1
   freezeChance: 30
   tierOneUnlocked: 1
   tierTwo1Unlocked: 1
@@ -133,7 +134,6 @@ MonoBehaviour:
   tierThree1Unlocked: 1
   tierThree2Unlocked: 1
   chaser: {fileID: 983617959185325245}
-  playerScript: {fileID: 0}
   freezeDMG: 5
   freezeSplashRadius: 10
 --- !u!58 &6975854582978200600
