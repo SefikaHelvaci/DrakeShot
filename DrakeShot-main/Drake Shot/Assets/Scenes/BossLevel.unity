@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c65a7c2f4196f9346992f858f68e3e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
+  maxHP: 45
   HP: 0
   wound: {r: 0.98823535, g: 0.43137258, b: 0.2509804, a: 0}
 --- !u!114 &62759892
@@ -143178,7 +143178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c65a7c2f4196f9346992f858f68e3e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
+  maxHP: 45
   HP: 0
   wound: {r: 0.98823535, g: 0.43137258, b: 0.2509804, a: 0}
 --- !u!114 &1274612315
@@ -148931,7 +148931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c65a7c2f4196f9346992f858f68e3e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
+  maxHP: 75
   HP: 0
   wound: {r: 0.98823535, g: 0.43137258, b: 0.2509804, a: 0}
 --- !u!114 &1647118761
