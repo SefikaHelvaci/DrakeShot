@@ -42,7 +42,16 @@ public class GameOver : MonoBehaviour
 
     public void RestartGame()
     {
+        GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
+
+        foreach (GameObject go in allObjects) {
+            if (go.transform.parent == null && go != gameObject)
+            {
+                Destroy(go);
+            }
+        }
         Time.timeScale = 1f; 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Level1");
+        Destroy(gameObject);
     }
 }
