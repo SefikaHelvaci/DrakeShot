@@ -8,6 +8,7 @@ public class MobScript : MonoBehaviour {
     [SerializeField] private GameObject xpPrefab;
     [SerializeField] private float health = 10;
     [SerializeField] private float cycleCoef = 1f;
+    [SerializeField] private int dropAmount = 1;
 
     [SerializeField] private float freezeChance = 30f;
     [SerializeField] private bool tierOneUnlocked = true;
@@ -70,15 +71,16 @@ public class MobScript : MonoBehaviour {
 
             }
 
-            AutoInstantiate(goldPrefab);
-            AutoInstantiate(xpPrefab);
-
+            for (int i = 0; i < dropAmount; i++) {
+                AutoInstantiate(goldPrefab);
+                AutoInstantiate(xpPrefab);
+            }
+            
             Destroy(gameObject);
 
             return;
 
-            void AutoInstantiate(GameObject a)
-            {
+            void AutoInstantiate(GameObject a) {
 
                 Instantiate(a, transform.position + (Vector3)(Random.insideUnitCircle * cycleCoef),
                     Quaternion.identity);

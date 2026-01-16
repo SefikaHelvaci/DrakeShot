@@ -2479,6 +2479,7 @@ MonoBehaviour:
     type: 3}
   health: 50
   cycleCoef: 1
+  dropAmount: 5
   freezeChance: 30
   tierOneUnlocked: 0
   tierTwo1Unlocked: 0

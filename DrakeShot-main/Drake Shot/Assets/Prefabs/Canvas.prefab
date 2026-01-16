@@ -4470,19 +4470,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeedSkillButton: {fileID: 8727369666922619627}
   walkSpeedSkillAddText: {fileID: 7216176905815920418}
-  walkSpeedSkillCost: 0
+  walkSpeedSkillCost: 10
   walkSpeedSkillEffectValue: 5
   dodgeSkillButton: {fileID: 3743296518602981929}
   dodgeSkillAddText: {fileID: 1154737144568028771}
-  dodgeSkillCost: 0
+  dodgeSkillCost: 10
   dodgeSkillEffectValue: 20
   fireRateSkillButton: {fileID: 1666595493718545931}
   fireRateSkillAddText: {fileID: 8267379283454945164}
-  fireRateSkillCost: 0
+  fireRateSkillCost: 10
   fireRateSkillEffectValue: 0.1
   bulletSpeedSkillButton: {fileID: 3276757285873865206}
   bulletSpeedSkillAddText: {fileID: 2296652612250971507}
-  bulletSpeedSkillCost: 0
+  bulletSpeedSkillCost: 10
   bulletSpeedSkillEffectValue: 3
   myGainSkillScript: {fileID: 0}
 --- !u!1 &7464516948106762158
